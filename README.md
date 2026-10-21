@@ -41,7 +41,7 @@ On the issue of defining value-sets, PGO's intent is to provide clear mechanisms
 
 ### [Process](https://github.com/Pistoia-Alliance-Inc/Pistoia-Alliance-PGO/wiki/2024%E2%80%90PGO-process)
 
-### [List of experts](https://github.com/Pistoia-Alliance-Inc/Pistoia-Alliance-PGO/wiki/PGO-2024-expert-list)
+### [List of experts](https://pistoia-alliance-inc.github.io/Pistoia-Alliance-PGO/list-of-experts.html)
 
 ### [Summaries of alignments meetings](https://github.com/Pistoia-Alliance-Inc/Pistoia-Alliance-PGO/wiki/2024_PGO_V1.0-_summary_meetings)
 
