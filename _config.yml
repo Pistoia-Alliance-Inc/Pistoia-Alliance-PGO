@@ -1,0 +1,9 @@
+# Root Jekyll config for GitHub Pages (served from the "development" branch).
+# Note: assets/_config.yml is NOT read by Jekyll. Only a root _config.yml counts.
+# Theme matches what is live today (jekyll-theme-slate), so the look does not change.
+# title and description are deliberately NOT set: they are currently derived from the
+# repo name and repo description by jekyll-github-metadata, and we keep them as is.
+theme: jekyll-theme-slate
+
+plugins:
+  - jekyll-sitemap   # generates /sitemap.xml at every build, no manual upkeep
