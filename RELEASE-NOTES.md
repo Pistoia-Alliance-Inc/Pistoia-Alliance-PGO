@@ -1,6 +1,6 @@
 # PGO version 2.0, release notes
 
-Release date: to be confirmed (target: end of November 2026)
+Release date: November 25, 2026
 
 ## What is new
 
