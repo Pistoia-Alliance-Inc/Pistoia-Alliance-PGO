@@ -42,26 +42,26 @@ ns1:PGO-00000001 a skos:Concept ;
             dcterms:identifier <http://purl.obolibrary.org/obo/OBI_0302737> ;
             rdf:value "PCR-SSCP assay" ;
             prov:wasDerivedFrom "OBI" ],
-        [ dcterms:description "Enzyme-linked immunosorbent assay; widely used immunoassay in pharma R&D; OBI_0000661"@en ;
-            dcterms:identifier <http://purl.obolibrary.org/obo/OBI_0000661> ;
-            rdf:value "ELISA" ;
-            prov:wasDerivedFrom "OBI" ],
-        [ dcterms:description "A laboratory test measuring the ability of immune cells (cytotoxic T cells, NK cells) to kill target cells; MAXO clinical-domain assay (MAXO_0020017)"@en ;
-            dcterms:identifier <http://purl.obolibrary.org/obo/MAXO_0020017> ;
-            rdf:value "cytotoxicity assay" ;
-            prov:wasDerivedFrom "MAXO" ],
-        [ dcterms:description "A test to determine if cells are undergoing programmed cell death"@en ;
-            dcterms:identifier <http://purl.obolibrary.org/obo/MAXO_0035080> ;
-            rdf:value "apoptosis assay" ;
-            prov:wasDerivedFrom "MAXO" ],
         [ dcterms:description "An assay to assess the presence of immune complexes in the blood circulation; MAXO clinical-domain assay (MAXO_0035109)"@en ;
             dcterms:identifier <http://purl.obolibrary.org/obo/MAXO_0035109> ;
             rdf:value "immune complex assay" ;
             prov:wasDerivedFrom "MAXO" ],
+        [ dcterms:description "A laboratory test measuring the ability of immune cells (cytotoxic T cells, NK cells) to kill target cells; MAXO clinical-domain assay (MAXO_0020017)"@en ;
+            dcterms:identifier <http://purl.obolibrary.org/obo/MAXO_0020017> ;
+            rdf:value "cytotoxicity assay" ;
+            prov:wasDerivedFrom "MAXO" ],
         [ dcterms:description "ADP-ribose-specific chromatin-affinity purification; EFO assay term (EFO_0010012); illustrates EFO for assay annotation"@en ;
             dcterms:identifier <http://www.ebi.ac.uk/efo/EFO_0010012> ;
             rdf:value "ADPr-ChAP" ;
-            prov:wasDerivedFrom "EFO" ] ;
+            prov:wasDerivedFrom "EFO" ],
+        [ dcterms:description "A test to determine if cells are undergoing programmed cell death"@en ;
+            dcterms:identifier <http://purl.obolibrary.org/obo/MAXO_0035080> ;
+            rdf:value "apoptosis assay" ;
+            prov:wasDerivedFrom "MAXO" ],
+        [ dcterms:description "Enzyme-linked immunosorbent assay; widely used immunoassay in pharma R&D; OBI_0000661"@en ;
+            dcterms:identifier <http://purl.obolibrary.org/obo/OBI_0000661> ;
+            rdf:value "ELISA" ;
+            prov:wasDerivedFrom "OBI" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "assay"@en ;
     prov:endedAtTime "2025-06-12"^^xsd:date ;
@@ -82,6 +82,19 @@ ns1:PGO-00000001 a skos:Concept ;
             sh:pattern "BAO_[0-9]{7}" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open, attribution required" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "OBI Consortium / OBO Foundry" ;
+            dcterms:rights "https://obi-ontology.org/" ;
+            dcterms:title "Ontology for Biomedical Investigations (OBI)" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "http://obi-ontology.org / http://purl.obolibrary.org/obo/OBI_" ;
+            skos:note "Recommended by experts; formally defined assay types. Research & Early Development" ;
+            skos:scopeNote "OBI assay identifiers for types of assays (not individual instances)" ;
+            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/obi> ;
+            sh:pattern "OBI_[0-9]{7}" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution required" ],
         [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "OBO Foundry" ;
@@ -106,19 +119,6 @@ ns1:PGO-00000001 a skos:Concept ;
             skos:scopeNote "Assay terms used in GWAS / experimental annotation" ;
             dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/efo> ;
             sh:pattern "EFO:[0-9]{7}" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "OBI Consortium / OBO Foundry" ;
-            dcterms:rights "https://obi-ontology.org/" ;
-            dcterms:title "Ontology for Biomedical Investigations (OBI)" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "http://obi-ontology.org / http://purl.obolibrary.org/obo/OBI_" ;
-            skos:note "Recommended by experts; formally defined assay types. Research & Early Development" ;
-            skos:scopeNote "OBI assay identifiers for types of assays (not individual instances)" ;
-            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/obi> ;
-            sh:pattern "OBI_[0-9]{7}" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ] .
 
@@ -159,6 +159,18 @@ ns1:PGO-00000002 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
+            dcterms:license <https://www.cancer.gov/policies/copyright-reuse> ;
+            dcterms:publisher "National Cancer Institute (NCI), NIH" ;
+            dcterms:rights "https://www.cancer.gov/policies" ;
+            dcterms:title "EDRN (Early Detection Research Network) Biomarker Database" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://edrn.cancer.gov/data-and-resources/biomarkers/" ;
+            skos:note "EDRN (NCI) — curated cancer early-detection biomarkers, one page per biomarker (HMDB description, aliases, organs, studies). Research & Early Development / Clinical" ;
+            skos:scopeNote "Cancer biomarker instances (slug-based per-biomarker URLs)" ;
+            dcat:endpointURL <https://edrn.cancer.gov/data-and-resources/biomarkers/> ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "Wishart Lab / University of Alberta" ;
             dcterms:rights "https://markerdb.ca" ;
@@ -180,18 +192,6 @@ ns1:PGO-00000002 a skos:Concept ;
             skos:note "BEST (FDA/NIH). Delivered as an NIH Bookshelf resource; defines biomarker categories (molecular, histologic, radiographic, physiologic) but has no individual resolvable per-term URIs, so it is a reference source only, not an instance-URL source. Retained in PGO V2.0 as a documented stub: potentially a high-value instance-URL source for biomarkers if a machine-readable (RDF/database) version is or becomes available. Asiyah Yu Lin to follow up with FDA/NIH on whether BEST could be offered as a database/RDF (no response yet as of 2026-10-19)" ;
             skos:scopeNote "Biomarker category definitions (source-only stub; no instance URLs yet; watch for a machine-readable release)" ;
             ns1:identifierResolvability "no" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
-            dcterms:license <https://www.cancer.gov/policies/copyright-reuse> ;
-            dcterms:publisher "National Cancer Institute (NCI), NIH" ;
-            dcterms:rights "https://www.cancer.gov/policies" ;
-            dcterms:title "EDRN (Early Detection Research Network) Biomarker Database" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://edrn.cancer.gov/data-and-resources/biomarkers/" ;
-            skos:note "EDRN (NCI) — curated cancer early-detection biomarkers, one page per biomarker (HMDB description, aliases, organs, studies). Research & Early Development / Clinical" ;
-            skos:scopeNote "Cancer biomarker instances (slug-based per-biomarker URLs)" ;
-            dcat:endpointURL <https://edrn.cancer.gov/data-and-resources/biomarkers/> ;
-            ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — no conditions" ] .
 
 ns1:PGO-00000003 a skos:Concept ;
@@ -318,14 +318,10 @@ ns1:PGO-00000005 a skos:Concept ;
     skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C15206>,
         <https://biolink.github.io/biolink-model/ClinicalTrial>,
         <https://www.wikidata.org/entity/Q30612> ;
-    skos:example [ dcterms:description "Japanese trial (jRCT): Phase 2, randomized, placebo-controlled study of SAR448851 in participants with early Alzheimer's disease"@en ;
-            dcterms:identifier <https://jrct.mhlw.go.jp/en-latest-detail/jRCT2061260062> ;
-            rdf:value "jRCT2061260062" ;
-            prov:wasDerivedFrom "jRCT" ],
-        [ dcterms:description "WHO ICTRP record aggregating a Chinese (ChiCTR) trial not listed as a separate PGO source: sequential mepolizumab/stapokibart therapy for CRSwNP with severe eosinophilic asthma; illustrates ICTRP's meta-registry value"@en ;
-            dcterms:identifier <https://trialsearch.who.int/Trial2.aspx?TrialID=ChiCTR2600127395> ;
-            rdf:value "ChiCTR2600127395 (via WHO ICTRP)" ;
-            prov:wasDerivedFrom "WHO ICTRP" ],
+    skos:example [ dcterms:description "COMMIT trial: efficacy and safety of adding clopidogrel to aspirin, or metoprolol, in acute myocardial infarction; direct ClinicalTrials.gov link"@en ;
+            dcterms:identifier <https://clinicaltrials.gov/study/NCT00222573> ;
+            rdf:value "NCT00222573" ;
+            prov:wasDerivedFrom "ClinicalTrials.gov" ],
         [ dcterms:description "UK trial (ISRCTN registry): effect of inhaled-steroid non-adherence on response to mepolizumab in severe asthma"@en ;
             dcterms:identifier <https://www.isrctn.com/ISRCTN10555748> ;
             rdf:value "ISRCTN10555748" ;
@@ -334,14 +330,18 @@ ns1:PGO-00000005 a skos:Concept ;
             dcterms:identifier <https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=390988> ;
             rdf:value "ACTRN12626001111369 (BALLOON-AU)" ;
             prov:wasDerivedFrom "ANZCTR" ],
+        [ dcterms:description "Japanese trial (jRCT): Phase 2, randomized, placebo-controlled study of SAR448851 in participants with early Alzheimer's disease"@en ;
+            dcterms:identifier <https://jrct.mhlw.go.jp/en-latest-detail/jRCT2061260062> ;
+            rdf:value "jRCT2061260062" ;
+            prov:wasDerivedFrom "jRCT" ],
         [ dcterms:description "Phase 3 imaging study ([123I]NAV5001) for the diagnosis of parkinsonian syndromes"@en ;
             dcterms:identifier <https://clinicaltrials.gov/study/NCT01950455> ;
             rdf:value "NCT01950455" ;
             prov:wasDerivedFrom "ClinicalTrials.gov" ],
-        [ dcterms:description "COMMIT trial: efficacy and safety of adding clopidogrel to aspirin, or metoprolol, in acute myocardial infarction; direct ClinicalTrials.gov link"@en ;
-            dcterms:identifier <https://clinicaltrials.gov/study/NCT00222573> ;
-            rdf:value "NCT00222573" ;
-            prov:wasDerivedFrom "ClinicalTrials.gov" ] ;
+        [ dcterms:description "WHO ICTRP record aggregating a Chinese (ChiCTR) trial not listed as a separate PGO source: sequential mepolizumab/stapokibart therapy for CRSwNP with severe eosinophilic asthma; illustrates ICTRP's meta-registry value"@en ;
+            dcterms:identifier <https://trialsearch.who.int/Trial2.aspx?TrialID=ChiCTR2600127395> ;
+            rdf:value "ChiCTR2600127395 (via WHO ICTRP)" ;
+            prov:wasDerivedFrom "WHO ICTRP" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "clinical study"@en ;
     prov:endedAtTime "2025-03-12"^^xsd:date ;
@@ -350,17 +350,6 @@ ns1:PGO-00000005 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://www.ema.europa.eu/en/about-us/legal-notice> ;
-            dcterms:publisher "European Medicines Agency (EMA)" ;
-            dcterms:rights "https://euclinicaltrials.eu/about/" ;
-            dcterms:title "EU Clinical Trials Information System (CTIS)" ;
-            dcterms:type "registry" ;
-            void:uriSpace "https://euclinicaltrials.eu" ;
-            skos:note "EU Clinical Trials Information System (CTIS). Research & Early Development / Clinical. CTIS launched Jan 2023; older EU trials use EudraCT numbers (clinicaltrialsregister.eu)" ;
-            skos:scopeNote "EU clinical trial numbers" ;
-            ns1:identifierResolvability "partial" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
             dcterms:license <https://jrct.mhlw.go.jp/en-top> ;
             dcterms:publisher "Ministry of Health, Labour and Welfare (MHLW), Japan" ;
             dcterms:rights "https://jrct.mhlw.go.jp/en-top" ;
@@ -374,15 +363,27 @@ ns1:PGO-00000005 a skos:Concept ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — public registry" ],
         [ a void:Dataset ;
-            dcterms:license <https://www.who.int/about/policies/terms-of-use> ;
-            dcterms:publisher "World Health Organization (WHO)" ;
-            dcterms:rights "https://trialsearch.who.int/" ;
-            dcterms:title "WHO International Clinical Trials Registry Platform (ICTRP)" ;
+            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+            dcterms:publisher "BMC (Springer Nature)" ;
+            dcterms:rights "https://www.isrctn.com/" ;
+            dcterms:title "ISRCTN Registry" ;
             dcterms:type "registry" ;
-            void:uriSpace "https://trialsearch.who.int" ;
-            skos:note "WHO ICTRP — meta-registry aggregating national and regional trial registries. Clinical" ;
-            skos:scopeNote "Global aggregated trial records" ;
-            dcat:endpointURL <https://trialsearch.who.int/> ;
+            void:uriSpace "https://www.isrctn.com/" ;
+            skos:note "ISRCTN — interventional and non-interventional studies, especially those involving UK participants; a WHO ICTRP primary registry. Clinical" ;
+            skos:scopeNote "UK-focused trial records" ;
+            dcat:endpointURL <https://www.isrctn.com/> ;
+            sh:pattern "ISRCTN[0-9]{8}" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
+            dcterms:license <https://www.ema.europa.eu/en/about-us/legal-notice> ;
+            dcterms:publisher "European Medicines Agency (EMA)" ;
+            dcterms:rights "https://euclinicaltrials.eu/about/" ;
+            dcterms:title "EU Clinical Trials Information System (CTIS)" ;
+            dcterms:type "registry" ;
+            void:uriSpace "https://euclinicaltrials.eu" ;
+            skos:note "EU Clinical Trials Information System (CTIS). Research & Early Development / Clinical. CTIS launched Jan 2023; older EU trials use EudraCT numbers (clinicaltrialsregister.eu)" ;
+            skos:scopeNote "EU clinical trial numbers" ;
             ns1:identifierResolvability "partial" ;
             ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
@@ -399,6 +400,18 @@ ns1:PGO-00000005 a skos:Concept ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
+            dcterms:license <https://www.who.int/about/policies/terms-of-use> ;
+            dcterms:publisher "World Health Organization (WHO)" ;
+            dcterms:rights "https://trialsearch.who.int/" ;
+            dcterms:title "WHO International Clinical Trials Registry Platform (ICTRP)" ;
+            dcterms:type "registry" ;
+            void:uriSpace "https://trialsearch.who.int" ;
+            skos:note "WHO ICTRP — meta-registry aggregating national and regional trial registries. Clinical" ;
+            skos:scopeNote "Global aggregated trial records" ;
+            dcat:endpointURL <https://trialsearch.who.int/> ;
+            ns1:identifierResolvability "partial" ;
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
             dcterms:license <https://www.anzctr.org.au/Support/TermsAndConditions.aspx> ;
             dcterms:publisher "NHMRC Clinical Trials Centre, University of Sydney" ;
             dcterms:rights "https://www.anzctr.org.au/" ;
@@ -409,19 +422,6 @@ ns1:PGO-00000005 a skos:Concept ;
             skos:scopeNote "Regional (AU/NZ) trial records" ;
             dcat:endpointURL <https://www.anzctr.org.au/> ;
             sh:pattern "ACTRN[0-9]{14}" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-            dcterms:publisher "BMC (Springer Nature)" ;
-            dcterms:rights "https://www.isrctn.com/" ;
-            dcterms:title "ISRCTN Registry" ;
-            dcterms:type "registry" ;
-            void:uriSpace "https://www.isrctn.com/" ;
-            skos:note "ISRCTN — interventional and non-interventional studies, especially those involving UK participants; a WHO ICTRP primary registry. Clinical" ;
-            skos:scopeNote "UK-focused trial records" ;
-            dcat:endpointURL <https://www.isrctn.com/> ;
-            sh:pattern "ISRCTN[0-9]{8}" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — no conditions" ] .
 
@@ -454,6 +454,17 @@ ns1:PGO-00000006 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
+            dcterms:license <https://www.who.int/about/policies/terms-of-use> ;
+            dcterms:publisher "World Health Organization (WHO)" ;
+            dcterms:rights "https://trialsearch.who.int/" ;
+            dcterms:title "WHO International Clinical Trials Registry Platform (ICTRP)" ;
+            dcterms:type "registry" ;
+            void:uriSpace "https://trialsearch.who.int" ;
+            skos:note "WHO International Clinical Trials Registry Platform. Clinical / R&ED. Does not expose stable persistent URIs for individual study sites" ;
+            skos:scopeNote "Global site registry" ;
+            ns1:identifierResolvability "partial" ;
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
             dcterms:license <https://www.ema.europa.eu/en/about-us/legal-notice> ;
             dcterms:publisher "European Medicines Agency (EMA)" ;
             dcterms:rights "https://www.clinicaltrialsregister.eu/about" ;
@@ -475,17 +486,6 @@ ns1:PGO-00000006 a skos:Concept ;
             skos:scopeNote "Study site locations listed in clinical trial records" ;
             dcat:endpointURL <https://clinicaltrials.gov/api/v2/> ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
-            dcterms:license <https://www.who.int/about/policies/terms-of-use> ;
-            dcterms:publisher "World Health Organization (WHO)" ;
-            dcterms:rights "https://trialsearch.who.int/" ;
-            dcterms:title "WHO International Clinical Trials Registry Platform (ICTRP)" ;
-            dcterms:type "registry" ;
-            void:uriSpace "https://trialsearch.who.int" ;
-            skos:note "WHO International Clinical Trials Registry Platform. Clinical / R&ED. Does not expose stable persistent URIs for individual study sites" ;
-            skos:scopeNote "Global site registry" ;
-            ns1:identifierResolvability "partial" ;
             ns1:natureOfLicence "open — no conditions" ] .
 
 ns1:PGO-00000007 a skos:Concept ;
@@ -508,38 +508,38 @@ ns1:PGO-00000007 a skos:Concept ;
     skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C43366>,
         <https://biolink.github.io/biolink-model/ChemicalEntity>,
         <https://www.wikidata.org/entity/Q11173> ;
-    skos:example [ dcterms:description "Simple organic compound; CAS RN 64-17-5 (in the free CAS Common Chemistry subset)"@en ;
-            dcterms:identifier <https://commonchemistry.cas.org/detail?cas_rn=64-17-5> ;
+    skos:example [ dcterms:description "Simple organic compound example"@en ;
+            dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16236> ;
             rdf:value "ethanol" ;
-            prov:wasDerivedFrom "CAS Common Chemistry" ],
-        [ dcterms:description "Inorganic compound example"@en ;
-            dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:26710> ;
-            rdf:value "sodium chloride" ;
             prov:wasDerivedFrom "ChEBI" ],
         [ dcterms:description "Simple organic compound (carboxylic acid); ChemSpider ID 1005"@en ;
             dcterms:identifier <https://www.chemspider.com/Chemical-Structure.1005.html> ;
             rdf:value "propionic acid" ;
             prov:wasDerivedFrom "ChemSpider" ],
-        [ dcterms:description "Inorganic compound example; ChemSpider ID 937"@en ;
-            dcterms:identifier <http://www.chemspider.com/Chemical-Structure.937.html> ;
-            rdf:value "water" ;
-            prov:wasDerivedFrom "ChemSpider" ],
-        [ dcterms:description "Simple organic compound example"@en ;
-            dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16236> ;
+        [ dcterms:description "Simple organic compound; CAS RN 64-17-5 (in the free CAS Common Chemistry subset)"@en ;
+            dcterms:identifier <https://commonchemistry.cas.org/detail?cas_rn=64-17-5> ;
             rdf:value "ethanol" ;
-            prov:wasDerivedFrom "ChEBI" ],
+            prov:wasDerivedFrom "CAS Common Chemistry" ],
         [ dcterms:description "Stable-isotope-labeled (13C/2H) L-alanine; CAS RN 160033-81-8 (plain L-alanine 56-41-1 is not in the free subset)"@en ;
             dcterms:identifier <https://commonchemistry.cas.org/detail?cas_rn=160033-81-8&search=O%3DC(O)C(N)C> ;
             rdf:value "L-Alanine-3-13C-2-d" ;
             prov:wasDerivedFrom "CAS Common Chemistry" ],
-        [ dcterms:description "Acetylsalicylic acid — CID 2244; illustrates PubChem as compound source"@en ;
-            dcterms:identifier <https://pubchem.ncbi.nlm.nih.gov/compound/2244> ;
-            rdf:value "aspirin" ;
-            prov:wasDerivedFrom "PubChem" ],
+        [ dcterms:description "Inorganic compound example; ChemSpider ID 937"@en ;
+            dcterms:identifier <http://www.chemspider.com/Chemical-Structure.937.html> ;
+            rdf:value "water" ;
+            prov:wasDerivedFrom "ChemSpider" ],
+        [ dcterms:description "Inorganic compound example"@en ;
+            dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:26710> ;
+            rdf:value "sodium chloride" ;
+            prov:wasDerivedFrom "ChEBI" ],
         [ dcterms:description "Compound (as opposed to \"aspirin\", which is a product)"@en ;
             dcterms:identifier <https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL25> ;
             rdf:value "acetylsalicylic acid" ;
-            prov:wasDerivedFrom "ChEMBL" ] ;
+            prov:wasDerivedFrom "ChEMBL" ],
+        [ dcterms:description "Acetylsalicylic acid — CID 2244; illustrates PubChem as compound source"@en ;
+            dcterms:identifier <https://pubchem.ncbi.nlm.nih.gov/compound/2244> ;
+            rdf:value "aspirin" ;
+            prov:wasDerivedFrom "PubChem" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "compound"@en ;
     prov:endedAtTime "2025-06-12"^^xsd:date ;
@@ -548,18 +548,18 @@ ns1:PGO-00000007 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://www.rsc.org/help-legal/legal/terms-conditions/> ;
-            dcterms:publisher "Royal Society of Chemistry (RSC)" ;
-            dcterms:rights "https://www.chemspider.com/" ;
-            dcterms:title "ChemSpider" ;
+            dcterms:license <https://www.usa.gov/government-works> ;
+            dcterms:publisher "NCBI, NIH" ;
+            dcterms:rights "https://pubchem.ncbi.nlm.nih.gov/docs/rdf" ;
+            dcterms:title "PubChem" ;
             dcterms:type "database" ;
-            void:uriSpace "http://www.chemspider.com/" ;
-            skos:note "ChemSpider — RSC database of chemical structures aggregated from many sources. Research & Early Development" ;
-            skos:scopeNote "Chemical structures and cross-referenced identifiers" ;
-            dcat:endpointURL <https://www.chemspider.com/> ;
-            sh:pattern "[0-9]+" ;
+            void:uriSpace "https://pubchem.ncbi.nlm.nih.gov/" ;
+            skos:note "PubChem — NCBI chemical substance database. Research & Early Development" ;
+            skos:scopeNote "Large-scale compound database" ;
+            dcat:endpointURL <https://pubchem.ncbi.nlm.nih.gov/rest/pug/> ;
+            sh:pattern "CID[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "restricted — free use; API key required" ],
+            ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by-nc/4.0/> ;
             dcterms:publisher "CAS (American Chemical Society)" ;
@@ -573,19 +573,6 @@ ns1:PGO-00000007 a skos:Concept ;
             sh:pattern "[0-9]{2,7}-[0-9]{2}-[0-9]" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — non-commercial, attribution" ],
-        [ a void:Dataset ;
-            dcterms:license <https://www.usa.gov/government-works> ;
-            dcterms:publisher "NCBI, NIH" ;
-            dcterms:rights "https://pubchem.ncbi.nlm.nih.gov/docs/rdf" ;
-            dcterms:title "PubChem" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://pubchem.ncbi.nlm.nih.gov/" ;
-            skos:note "PubChem — NCBI chemical substance database. Research & Early Development" ;
-            skos:scopeNote "Large-scale compound database" ;
-            dcat:endpointURL <https://pubchem.ncbi.nlm.nih.gov/rest/pug/> ;
-            sh:pattern "CID[0-9]+" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "EMBL-EBI" ;
@@ -611,7 +598,20 @@ ns1:PGO-00000007 a skos:Concept ;
             dcat:endpointURL <https://www.ebi.ac.uk/chembl/api/data/> ;
             sh:pattern "CHEMBL[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution + share-alike" ] .
+            ns1:natureOfLicence "open — attribution + share-alike" ],
+        [ a void:Dataset ;
+            dcterms:license <https://www.rsc.org/help-legal/legal/terms-conditions/> ;
+            dcterms:publisher "Royal Society of Chemistry (RSC)" ;
+            dcterms:rights "https://www.chemspider.com/" ;
+            dcterms:title "ChemSpider" ;
+            dcterms:type "database" ;
+            void:uriSpace "http://www.chemspider.com/" ;
+            skos:note "ChemSpider — RSC database of chemical structures aggregated from many sources. Research & Early Development" ;
+            skos:scopeNote "Chemical structures and cross-referenced identifiers" ;
+            dcat:endpointURL <https://www.chemspider.com/> ;
+            sh:pattern "[0-9]+" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "restricted — free use; API key required" ] .
 
 ns1:PGO-00000008 a skos:Concept ;
     rdfs:label "device"@en ;
@@ -633,13 +633,13 @@ ns1:PGO-00000008 a skos:Concept ;
         "medical device: Specification of an instrument, apparatus, appliance, software, material or other article ... not achieve its principal intended action by pharmacological, immunological or metabolic means ... [https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/MedicalDevice]"@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C62103>,
         <https://www.wikidata.org/entity/Q6554101> ;
-    skos:example [ dcterms:description "Instrument used to separate mixture components by density"@en ;
-            dcterms:identifier <http://purl.obolibrary.org/obo/OBI_0400106> ;
-            rdf:value "centrifuge" ;
-            prov:wasDerivedFrom "OBI" ],
-        [ dcterms:description "Instrument used to perform the polymerase chain reaction (PCR machine); OBI_0000989 (click-verified by GN 2026-10-17)"@en ;
+    skos:example [ dcterms:description "Instrument used to perform the polymerase chain reaction (PCR machine); OBI_0000989 (click-verified by GN 2026-10-17)"@en ;
             dcterms:identifier <http://purl.obolibrary.org/obo/OBI_0000989> ;
             rdf:value "PCR instrument" ;
+            prov:wasDerivedFrom "OBI" ],
+        [ dcterms:description "Instrument used to separate mixture components by density"@en ;
+            dcterms:identifier <http://purl.obolibrary.org/obo/OBI_0400106> ;
+            rdf:value "centrifuge" ;
             prov:wasDerivedFrom "OBI" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "device"@en ;
@@ -649,6 +649,18 @@ ns1:PGO-00000008 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "National Cancer Institute (NCI), NIH" ;
+            dcterms:rights "https://evs.nci.nih.gov/license" ;
+            dcterms:title "NCI Thesaurus (NCIt) — EVS Explorer" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "https://evsexplore.semantics.cancer.gov/evsexplore/" ;
+            skos:note "NCI Thesaurus (NCIt). Research & Clinical. Device hierarchy under NCIT C62103" ;
+            skos:scopeNote "Device concept hierarchy via C62103/C16830" ;
+            dcat:endpointURL <https://api-evsrest.nci.nih.gov/api/v1/> ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "OBI Consortium / OBO Foundry" ;
             dcterms:rights "https://obi-ontology.org/" ;
@@ -660,19 +672,7 @@ ns1:PGO-00000008 a skos:Concept ;
             dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/obi> ;
             sh:pattern "OBI_[0-9]{7}" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "National Cancer Institute (NCI), NIH" ;
-            dcterms:rights "https://evs.nci.nih.gov/license" ;
-            dcterms:title "NCI Thesaurus (NCIt) — EVS Explorer" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "https://evsexplore.semantics.cancer.gov/evsexplore/" ;
-            skos:note "NCI Thesaurus (NCIt). Research & Clinical. Device hierarchy under NCIT C62103" ;
-            skos:scopeNote "Device concept hierarchy via C62103/C16830" ;
-            dcat:endpointURL <https://api-evsrest.nci.nih.gov/api/v1/> ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ] .
+            ns1:natureOfLicence "open — attribution required" ] .
 
 ns1:PGO-00000009 a skos:Concept ;
     rdfs:label "disease"@en ;
@@ -693,18 +693,18 @@ ns1:PGO-00000009 a skos:Concept ;
         <https://biolink.github.io/biolink-model/Disease>,
         schema:MedicalCondition,
         <https://www.wikidata.org/entity/Q12136> ;
-    skos:example [ dcterms:description "Chest pain due to myocardial ischaemia"@en ;
+    skos:example [ dcterms:description "Progressive neurodegenerative disease; Mondo Disease Ontology (MONDO:0004975)"@en ;
+            dcterms:identifier <https://monarchinitiative.org/MONDO:0004975> ;
+            rdf:value "Alzheimer disease" ;
+            prov:wasDerivedFrom "MONDO" ],
+        [ dcterms:description "Chest pain due to myocardial ischaemia"@en ;
             dcterms:identifier <https://hpo.jax.org/browse/term/HP:0001681> ;
             rdf:value "Angina pectoris" ;
             prov:wasDerivedFrom "HPO" ],
-        [ dcterms:description "SNOMED CT concept 195967001, Asthma (disorder); same concept in the BioPortal SNOMED CT index"@en ;
-            dcterms:identifier <https://bioportal.bioontology.org/ontologies/SNOMEDCT?p=classes&conceptid=195967001> ;
-            rdf:value "asthma" ;
-            prov:wasDerivedFrom "SNOMED CT" ],
-        [ dcterms:description "Disease Ontology entry for rheumatoid arthritis, a chronic autoimmune disease (DOID:7148)"@en ;
-            dcterms:identifier <https://disease-ontology.org/?id=DOID:7148> ;
-            rdf:value "rheumatoid arthritis" ;
-            prov:wasDerivedFrom "Disease Ontology" ],
+        [ dcterms:description "Chronic immune-mediated skin disease; EFO-native disease term (EFO:1001494)"@en ;
+            dcterms:identifier <http://www.ebi.ac.uk/efo/EFO_1001494> ;
+            rdf:value "psoriasis vulgaris" ;
+            prov:wasDerivedFrom "EFO" ],
         [ dcterms:description "Optic neuropathy; disease example (NCIt C26782)"@en ;
             dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C26782> ;
             rdf:value "glaucoma" ;
@@ -713,22 +713,22 @@ ns1:PGO-00000009 a skos:Concept ;
             dcterms:identifier <https://termbrowser.nhs.uk/?perspective=full&conceptId1=195967001&edition=uk-edition&release=v20260923&server=https://termbrowser.nhs.uk/sct-browser-api/snomed&langRefset=999000681000001101,999001251000000103> ;
             rdf:value "asthma" ;
             prov:wasDerivedFrom "SNOMED CT" ],
-        [ dcterms:description "MedDRA Preferred Term 10067585 -- regulatory coding of type 2 diabetes mellitus; resolves only for licensed, logged-in BioPortal users"@en ;
-            dcterms:identifier <http://purl.bioontology.org/ontology/MEDDRA/10067585> ;
-            rdf:value "Type 2 diabetes mellitus" ;
-            prov:wasDerivedFrom "MedDRA" ],
         [ dcterms:description "MedDRA Preferred Term 10002383 -- regulatory coding of angina pectoris (same condition as the HPO phenotype instance, in MedDRA's regulatory dictionary); resolves only for licensed, logged-in BioPortal users"@en ;
             dcterms:identifier <http://purl.bioontology.org/ontology/MEDDRA/10002383> ;
             rdf:value "Angina pectoris" ;
             prov:wasDerivedFrom "MedDRA" ],
-        [ dcterms:description "Chronic immune-mediated skin disease; EFO-native disease term (EFO:1001494)"@en ;
-            dcterms:identifier <http://www.ebi.ac.uk/efo/EFO_1001494> ;
-            rdf:value "psoriasis vulgaris" ;
-            prov:wasDerivedFrom "EFO" ],
-        [ dcterms:description "Progressive neurodegenerative disease; Mondo Disease Ontology (MONDO:0004975)"@en ;
-            dcterms:identifier <https://monarchinitiative.org/MONDO:0004975> ;
-            rdf:value "Alzheimer disease" ;
-            prov:wasDerivedFrom "MONDO" ] ;
+        [ dcterms:description "SNOMED CT concept 195967001, Asthma (disorder); same concept in the BioPortal SNOMED CT index"@en ;
+            dcterms:identifier <https://bioportal.bioontology.org/ontologies/SNOMEDCT?p=classes&conceptid=195967001> ;
+            rdf:value "asthma" ;
+            prov:wasDerivedFrom "SNOMED CT" ],
+        [ dcterms:description "MedDRA Preferred Term 10067585 -- regulatory coding of type 2 diabetes mellitus; resolves only for licensed, logged-in BioPortal users"@en ;
+            dcterms:identifier <http://purl.bioontology.org/ontology/MEDDRA/10067585> ;
+            rdf:value "Type 2 diabetes mellitus" ;
+            prov:wasDerivedFrom "MedDRA" ],
+        [ dcterms:description "Disease Ontology entry for rheumatoid arthritis, a chronic autoimmune disease (DOID:7148)"@en ;
+            dcterms:identifier <https://disease-ontology.org/?id=DOID:7148> ;
+            rdf:value "rheumatoid arthritis" ;
+            prov:wasDerivedFrom "Disease Ontology" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "disease"@en ;
     prov:endedAtTime "2025-06-12"^^xsd:date ;
@@ -737,29 +737,16 @@ ns1:PGO-00000009 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://www.snomed.org/snomed-ct/get-snomed> ;
-            dcterms:publisher "SNOMED International" ;
-            dcterms:rights "https://www.snomed.org/" ;
-            dcterms:title "SNOMED CT — Systematized Nomenclature of Medicine Clinical Terms" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "https://www.snomed.org/" ;
-            skos:note "SNOMED CT. Clinical. Requires a national licence or SNOMED International membership for access. Concept pages can be viewed in the NHS (UK) SNOMED CT browser (UK edition) and in BioPortal, which indexes SNOMED CT" ;
-            skos:scopeNote "Clinical disease terminology" ;
+            dcterms:license <https://www.meddra.org/how-to-use/support-documentation/english> ;
+            dcterms:publisher "ICH / Maintenance and Support Services Organization (MSSO)" ;
+            dcterms:rights "https://www.meddra.org/" ;
+            dcterms:title "Medical Dictionary for Regulatory Activities (MedDRA)" ;
+            dcterms:type "controlled vocabulary" ;
+            void:uriSpace "http://purl.bioontology.org/ontology/MEDDRA/" ;
+            skos:note "MedDRA. Clinical / Regulatory. Subscription-based terminology. Available in BioPortal as a private ontology for users with a validated MedDRA licence; per-term URIs follow the pattern http://purl.bioontology.org/ontology/MEDDRA/ followed by the PT code, and resolve only for licensed, logged-in users" ;
+            skos:scopeNote "Regulatory context; instances to be contributed by licenced practitioners" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "restricted — institutional access" ],
-        [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "Jackson Laboratory (JAX)" ;
-            dcterms:rights "https://hpo.jax.org/" ;
-            dcterms:title "Human Phenotype Ontology (HPO)" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "https://hpo.jax.org/" ;
-            skos:note "HPO — Human Phenotype Ontology. Clinical" ;
-            skos:scopeNote "Disease and phenotype identifiers" ;
-            dcat:endpointURL <https://hpo.jax.org/api/hpo/> ;
-            sh:pattern "HP:[0-9]{7}" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
+            ns1:natureOfLicence "commercial — subscription/fees" ],
         [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "University of Maryland School of Medicine" ;
@@ -774,17 +761,6 @@ ns1:PGO-00000009 a skos:Concept ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ],
         [ a void:Dataset ;
-            dcterms:license <https://www.meddra.org/how-to-use/support-documentation/english> ;
-            dcterms:publisher "ICH / Maintenance and Support Services Organization (MSSO)" ;
-            dcterms:rights "https://www.meddra.org/" ;
-            dcterms:title "Medical Dictionary for Regulatory Activities (MedDRA)" ;
-            dcterms:type "controlled vocabulary" ;
-            void:uriSpace "http://purl.bioontology.org/ontology/MEDDRA/" ;
-            skos:note "MedDRA. Clinical / Regulatory. Subscription-based terminology. Available in BioPortal as a private ontology for users with a validated MedDRA licence; per-term URIs follow the pattern http://purl.bioontology.org/ontology/MEDDRA/ followed by the PT code, and resolve only for licensed, logged-in users" ;
-            skos:scopeNote "Regulatory context; instances to be contributed by licenced practitioners" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "commercial — subscription/fees" ],
-        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "Monarch Initiative" ;
             dcterms:rights "https://mondo.monarchinitiative.org/" ;
@@ -795,6 +771,30 @@ ns1:PGO-00000009 a skos:Concept ;
             skos:scopeNote "Cross-ontology disease identifiers" ;
             dcat:endpointURL <https://api.monarchinitiative.org/v3/> ;
             sh:pattern "MONDO:[0-9]{7}" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution required" ],
+        [ a void:Dataset ;
+            dcterms:license <https://www.snomed.org/snomed-ct/get-snomed> ;
+            dcterms:publisher "SNOMED International" ;
+            dcterms:rights "https://www.snomed.org/" ;
+            dcterms:title "SNOMED CT — Systematized Nomenclature of Medicine Clinical Terms" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "https://www.snomed.org/" ;
+            skos:note "SNOMED CT. Clinical. Requires a national licence or SNOMED International membership for access. Concept pages can be viewed in the NHS (UK) SNOMED CT browser (UK edition) and in BioPortal, which indexes SNOMED CT" ;
+            skos:scopeNote "Clinical disease terminology" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "restricted — institutional access" ],
+        [ a void:Dataset ;
+            dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+            dcterms:publisher "EMBL-EBI" ;
+            dcterms:rights "https://www.ebi.ac.uk/efo/" ;
+            dcterms:title "Experimental Factor Ontology (EFO)" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "https://www.ebi.ac.uk/efo/" ;
+            skos:note "EFO — Experimental Factor Ontology. Research & Clinical" ;
+            skos:scopeNote "Experimental disease annotation" ;
+            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/efo> ;
+            sh:pattern "EFO:[0-9]{7}" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ],
         [ a void:Dataset ;
@@ -811,16 +811,16 @@ ns1:PGO-00000009 a skos:Concept ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
-            dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
-            dcterms:publisher "EMBL-EBI" ;
-            dcterms:rights "https://www.ebi.ac.uk/efo/" ;
-            dcterms:title "Experimental Factor Ontology (EFO)" ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "Jackson Laboratory (JAX)" ;
+            dcterms:rights "https://hpo.jax.org/" ;
+            dcterms:title "Human Phenotype Ontology (HPO)" ;
             dcterms:type "ontology" ;
-            void:uriSpace "https://www.ebi.ac.uk/efo/" ;
-            skos:note "EFO — Experimental Factor Ontology. Research & Clinical" ;
-            skos:scopeNote "Experimental disease annotation" ;
-            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/efo> ;
-            sh:pattern "EFO:[0-9]{7}" ;
+            void:uriSpace "https://hpo.jax.org/" ;
+            skos:note "HPO — Human Phenotype Ontology. Clinical" ;
+            skos:scopeNote "Disease and phenotype identifiers" ;
+            dcat:endpointURL <https://hpo.jax.org/api/hpo/> ;
+            sh:pattern "HP:[0-9]{7}" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ] .
 
@@ -849,13 +849,13 @@ ns1:PGO-00000010 a skos:Concept ;
             dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17303> ;
             rdf:value "Morphine" ;
             prov:wasDerivedFrom "ChEBI" ],
-        [ dcterms:description "Non-steroidal anti-inflammatory drug (NSAID) with cyclooxygenase inhibitor activity"@en ;
-            dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15365> ;
-            rdf:value "acetylsalicylic acid (aspirin)" ;
-            prov:wasDerivedFrom "ChEBI" ],
         [ dcterms:description "NSAID drug"@en ;
             dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5855> ;
             rdf:value "Ibuprofen" ;
+            prov:wasDerivedFrom "ChEBI" ],
+        [ dcterms:description "Non-steroidal anti-inflammatory drug (NSAID) with cyclooxygenase inhibitor activity"@en ;
+            dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15365> ;
+            rdf:value "acetylsalicylic acid (aspirin)" ;
             prov:wasDerivedFrom "ChEBI" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "drug"@en ;
@@ -908,10 +908,18 @@ ns1:PGO-00000011 a skos:Concept ;
         "Gene: A region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. [http://purl.obolibrary.org/obo/SO_0000704]"@en,
         "Gene: Basic unit of hereditary information composed of chains of nucleotide base pairs in specific sequences that encodes a protein or protein subunit. [https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Gene]"@en ;
     skos:exactMatch <https://www.wikidata.org/entity/Q7187> ;
-    skos:example [ dcterms:description "BRCA2 approved human gene symbol; HGNC:1101"@en ;
-            dcterms:identifier <https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101> ;
+    skos:example [ dcterms:description "Tumour protein p53 gene — key cancer suppressor gene; human chromosome 17"@en ;
+            dcterms:identifier <https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000141510> ;
+            rdf:value "TP53" ;
+            prov:wasDerivedFrom "Ensembl" ],
+        [ dcterms:description "BRCA2 DNA repair associated gene (Homo sapiens); Entrez Gene ID 675"@en ;
+            dcterms:identifier <https://www.ncbi.nlm.nih.gov/gene/675> ;
             rdf:value "BRCA2" ;
-            prov:wasDerivedFrom "HGNC" ],
+            prov:wasDerivedFrom "NCBI Gene (EntrezGene)" ],
+        [ dcterms:description "Tumour protein p53 gene (Homo sapiens); Entrez Gene ID 7157"@en ;
+            dcterms:identifier <https://www.ncbi.nlm.nih.gov/gene/7157> ;
+            rdf:value "TP53" ;
+            prov:wasDerivedFrom "NCBI Gene (EntrezGene)" ],
         [ dcterms:description "hedgehog gene in Drosophila melanogaster (fruit fly); Entrez Gene ID 42737; illustrates NCBI Gene's cross-species (non-human) coverage"@en ;
             dcterms:identifier <https://www.ncbi.nlm.nih.gov/gene/42737> ;
             rdf:value "hedgehog (hh)" ;
@@ -920,30 +928,22 @@ ns1:PGO-00000011 a skos:Concept ;
             dcterms:identifier <http://www.bioassayontology.org/bao#BAO_0000582> ;
             rdf:value "gene (BAO class)" ;
             prov:wasDerivedFrom "BAO" ],
-        [ dcterms:description "BRCA2 DNA repair associated gene (Homo sapiens); Entrez Gene ID 675"@en ;
-            dcterms:identifier <https://www.ncbi.nlm.nih.gov/gene/675> ;
-            rdf:value "BRCA2" ;
-            prov:wasDerivedFrom "NCBI Gene (EntrezGene)" ],
-        [ dcterms:description "Tumour protein p53 gene — key cancer suppressor gene; human chromosome 17"@en ;
-            dcterms:identifier <https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000141510> ;
-            rdf:value "TP53" ;
-            prov:wasDerivedFrom "Ensembl" ],
-        [ dcterms:description "Tumour protein p53 gene (Homo sapiens); Entrez Gene ID 7157"@en ;
-            dcterms:identifier <https://www.ncbi.nlm.nih.gov/gene/7157> ;
-            rdf:value "TP53" ;
-            prov:wasDerivedFrom "NCBI Gene (EntrezGene)" ],
         [ dcterms:description "BRCA2 DNA repair associated gene; human chromosome 13"@en ;
             dcterms:identifier <https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000139618;r=13:32315086-32400268> ;
             rdf:value "BRCA2" ;
             prov:wasDerivedFrom "Ensembl" ],
+        [ dcterms:description "PRO protein-coding gene entry for human TP53 (sequence_feature -> protein_coding_gene branch); PRO carries the same gene across species (rat, chicken, etc.), illustrating its cross-species gene coverage"@en ;
+            dcterms:identifier <https://www.ebi.ac.uk/ols4/ontologies/pr/classes/http%253A%252F%252Fwww.genenames.org%252Fcgi-bin%252Fgene_symbol_report%253Fhgnc_id%253D11998> ;
+            rdf:value "TP53 (human)" ;
+            prov:wasDerivedFrom "PRO" ],
         [ dcterms:description "BRCA1 DNA repair associated; approved human gene symbol HGNC:1100"@en ;
             dcterms:identifier <https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1100> ;
             rdf:value "BRCA1" ;
             prov:wasDerivedFrom "HGNC" ],
-        [ dcterms:description "PRO protein-coding gene entry for human TP53 (sequence_feature -> protein_coding_gene branch); PRO carries the same gene across species (rat, chicken, etc.), illustrating its cross-species gene coverage"@en ;
-            dcterms:identifier <https://www.ebi.ac.uk/ols4/ontologies/pr/classes/http%253A%252F%252Fwww.genenames.org%252Fcgi-bin%252Fgene_symbol_report%253Fhgnc_id%253D11998> ;
-            rdf:value "TP53 (human)" ;
-            prov:wasDerivedFrom "PRO" ] ;
+        [ dcterms:description "BRCA2 approved human gene symbol; HGNC:1101"@en ;
+            dcterms:identifier <https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101> ;
+            rdf:value "BRCA2" ;
+            prov:wasDerivedFrom "HGNC" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "gene"@en ;
     prov:endedAtTime "2025-03-12"^^xsd:date ;
@@ -952,6 +952,32 @@ ns1:PGO-00000011 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
+            dcterms:license <https://www.ebi.ac.uk/about/terms-of-use> ;
+            dcterms:publisher "EMBL-EBI / Wellcome Sanger Institute" ;
+            dcterms:rights "https://www.ensembl.org/info/about/legal/disclaimer.html" ;
+            dcterms:title "Ensembl Genome Browser" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://www.ensembl.org" ;
+            skos:note "De facto standard for gene identifiers in genomics research. Research & Early Development" ;
+            skos:scopeNote "Use Ensembl gene stable IDs (ENSG prefix) for human genes; covers all species" ;
+            dcat:endpointURL <https://rest.ensembl.org/> ;
+            sh:pattern "ENSG[0-9]{11}" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "University of Miami (Schürer Lab)" ;
+            dcterms:rights "http://bioassayontology.org" ;
+            dcterms:title "BioAssay Ontology (BAO)" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "http://www.bioassayontology.org/bao#BAO_" ;
+            skos:note "BioAssay Ontology (BAO). Research & Early Development. IRIs resolve via OLS4 / OntoBee" ;
+            skos:scopeNote "Gene references used within bioassay annotations" ;
+            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/bao> ;
+            sh:pattern "BAO_[0-9]{7}" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open, attribution required" ],
+        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "PRO Consortium (proconsortium.org)" ;
             dcterms:rights "https://proconsortium.org/" ;
@@ -989,33 +1015,7 @@ ns1:PGO-00000011 a skos:Concept ;
             dcat:endpointURL <https://rest.genenames.org/> ;
             sh:pattern "HGNC:[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
-            dcterms:license <https://www.ebi.ac.uk/about/terms-of-use> ;
-            dcterms:publisher "EMBL-EBI / Wellcome Sanger Institute" ;
-            dcterms:rights "https://www.ensembl.org/info/about/legal/disclaimer.html" ;
-            dcterms:title "Ensembl Genome Browser" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://www.ensembl.org" ;
-            skos:note "De facto standard for gene identifiers in genomics research. Research & Early Development" ;
-            skos:scopeNote "Use Ensembl gene stable IDs (ENSG prefix) for human genes; covers all species" ;
-            dcat:endpointURL <https://rest.ensembl.org/> ;
-            sh:pattern "ENSG[0-9]{11}" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "University of Miami (Schürer Lab)" ;
-            dcterms:rights "http://bioassayontology.org" ;
-            dcterms:title "BioAssay Ontology (BAO)" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "http://www.bioassayontology.org/bao#BAO_" ;
-            skos:note "BioAssay Ontology (BAO). Research & Early Development. IRIs resolve via OLS4 / OntoBee" ;
-            skos:scopeNote "Gene references used within bioassay annotations" ;
-            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/bao> ;
-            sh:pattern "BAO_[0-9]{7}" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open, attribution required" ] .
+            ns1:natureOfLicence "open — no conditions" ] .
 
 ns1:PGO-00000012 a skos:Concept ;
     rdfs:label "indication"@en ;
@@ -1036,17 +1036,17 @@ ns1:PGO-00000012 a skos:Concept ;
         "indication: Classifier for diseases, symptoms or procedures from medical terminology that is used for, but not limited to, the registration, documentation and safety monitoring of medicinal products. [https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/IndicationAsDiseaseSymptomProcedure]"@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C41184>,
         <https://www.wikidata.org/entity/Q496997> ;
-    skos:example [ dcterms:description "Example indication: glycaemic abnormality"@en ;
-            dcterms:identifier <https://hpo.jax.org/browse/term/HP:0011015> ;
-            rdf:value "Abnormal blood glucose concentration" ;
+    skos:example [ dcterms:description "Example indication: low blood pressure"@en ;
+            dcterms:identifier <https://hpo.jax.org/browse/term/HP:0002615> ;
+            rdf:value "Hypotension" ;
             prov:wasDerivedFrom "HPO" ],
         [ dcterms:description "Neurodegenerative disorder used as an indication for neuroprotective/dopaminergic treatments"@en ;
             dcterms:identifier <https://monarchinitiative.org/MONDO:0005180> ;
             rdf:value "Parkinson's disease" ;
             prov:wasDerivedFrom "MONDO" ],
-        [ dcterms:description "Example indication: low blood pressure"@en ;
-            dcterms:identifier <https://hpo.jax.org/browse/term/HP:0002615> ;
-            rdf:value "Hypotension" ;
+        [ dcterms:description "Example indication: glycaemic abnormality"@en ;
+            dcterms:identifier <https://hpo.jax.org/browse/term/HP:0011015> ;
+            rdf:value "Abnormal blood glucose concentration" ;
             prov:wasDerivedFrom "HPO" ],
         [ dcterms:description "EFO entry for T2DM — used in GWAS/experimental annotation"@en ;
             dcterms:identifier <https://www.ebi.ac.uk/efo/EFO_0001360> ;
@@ -1064,6 +1064,19 @@ ns1:PGO-00000012 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "Monarch Initiative" ;
+            dcterms:rights "https://mondo.monarchinitiative.org/" ;
+            dcterms:title "Mondo Disease Ontology (MONDO)" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "https://mondo.monarchinitiative.org/" ;
+            skos:note "MONDO. Clinical / R&ED" ;
+            skos:scopeNote "Indication identifiers via disease ontology" ;
+            dcat:endpointURL <https://api.monarchinitiative.org/v3/> ;
+            sh:pattern "MONDO:[0-9]{7}" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution required" ],
+        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "University of Maryland School of Medicine" ;
             dcterms:rights "https://disease-ontology.org/" ;
@@ -1090,18 +1103,16 @@ ns1:PGO-00000012 a skos:Concept ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ],
         [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "Monarch Initiative" ;
-            dcterms:rights "https://mondo.monarchinitiative.org/" ;
-            dcterms:title "Mondo Disease Ontology (MONDO)" ;
+            dcterms:license <https://www.snomed.org/snomed-ct/get-snomed> ;
+            dcterms:publisher "SNOMED International" ;
+            dcterms:rights "https://www.snomed.org/" ;
+            dcterms:title "SNOMED CT — Systematized Nomenclature of Medicine Clinical Terms" ;
             dcterms:type "ontology" ;
-            void:uriSpace "https://mondo.monarchinitiative.org/" ;
-            skos:note "MONDO. Clinical / R&ED" ;
-            skos:scopeNote "Indication identifiers via disease ontology" ;
-            dcat:endpointURL <https://api.monarchinitiative.org/v3/> ;
-            sh:pattern "MONDO:[0-9]{7}" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
+            void:uriSpace "https://www.snomed.org/" ;
+            skos:note "SNOMED CT. Clinical. Requires a national licence or SNOMED International membership for access" ;
+            skos:scopeNote "Clinical terminology (better for indication use case)" ;
+            ns1:identifierResolvability "partial" ;
+            ns1:natureOfLicence "restricted — institutional access" ],
         [ a void:Dataset ;
             dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
             dcterms:publisher "EMBL-EBI" ;
@@ -1115,17 +1126,6 @@ ns1:PGO-00000012 a skos:Concept ;
             sh:pattern "EFO:[0-9]{7}" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
-            dcterms:license <https://www.snomed.org/snomed-ct/get-snomed> ;
-            dcterms:publisher "SNOMED International" ;
-            dcterms:rights "https://www.snomed.org/" ;
-            dcterms:title "SNOMED CT — Systematized Nomenclature of Medicine Clinical Terms" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "https://www.snomed.org/" ;
-            skos:note "SNOMED CT. Clinical. Requires a national licence or SNOMED International membership for access" ;
-            skos:scopeNote "Clinical terminology (better for indication use case)" ;
-            ns1:identifierResolvability "partial" ;
-            ns1:natureOfLicence "restricted — institutional access" ],
         [ a void:Dataset ;
             dcterms:license <https://www.meddra.org/how-to-use/support-documentation/english> ;
             dcterms:publisher "ICH / Maintenance and Support Services Organization (MSSO)" ;
@@ -1158,13 +1158,13 @@ ns1:PGO-00000013 a skos:Concept ;
         "Product: Something that is produced by, results from, or obtained as a consequence of some process or transformation. [https://www.omg.org/spec/Commons/ProductsAndServices/Product]"@en ;
     skos:exactMatch <https://spec.pistoiaalliance.org/idmp/ontology/ISO11615-MedicinalProducts/PharmaceuticalProduct/PharmaceuticalProduct>,
         <https://www.wikidata.org/entity/Q28885102> ;
-    skos:example [ dcterms:description "FDA NDA 020702 — atorvastatin calcium tablets (Lipitor)"@en ;
-            dcterms:identifier <https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020702> ;
-            rdf:value "LIPITOR (atorvastatin calcium)" ;
-            prov:wasDerivedFrom "FDA Drugs@FDA" ],
-        [ dcterms:description "FDA-approved pharmaceutical product (albuterol sulfate inhaler)"@en ;
+    skos:example [ dcterms:description "FDA-approved pharmaceutical product (albuterol sulfate inhaler)"@en ;
             dcterms:identifier <https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020983> ;
             rdf:value "VENTOLIN HFA" ;
+            prov:wasDerivedFrom "FDA Drugs@FDA" ],
+        [ dcterms:description "FDA NDA 020702 — atorvastatin calcium tablets (Lipitor)"@en ;
+            dcterms:identifier <https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020702> ;
+            rdf:value "LIPITOR (atorvastatin calcium)" ;
             prov:wasDerivedFrom "FDA Drugs@FDA" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "pharmaceutical product"@en ;
@@ -1217,13 +1217,13 @@ ns1:PGO-00000014 a skos:Concept ;
         "ProteinSubstance: A single substance with a defined sequence of alpha-amino acids connected through peptide bonds [https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/ProteinSubstance]"@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/PR_000000001>,
         <https://www.wikidata.org/entity/Q8054> ;
-    skos:example [ dcterms:description "Cell-adhesion protein; altered in several carcinomas"@en ;
-            dcterms:identifier <https://www.uniprot.org/uniprot/P22223> ;
-            rdf:value "Cadherin-3 (CDH3)" ;
-            prov:wasDerivedFrom "UniProt" ],
-        [ dcterms:description "Key tumour suppressor protein; most frequently mutated gene in human cancer"@en ;
+    skos:example [ dcterms:description "Key tumour suppressor protein; most frequently mutated gene in human cancer"@en ;
             dcterms:identifier <https://www.uniprot.org/uniprotkb/P04637/entry> ;
             rdf:value "tumor protein p53 (TP53)" ;
+            prov:wasDerivedFrom "UniProt" ],
+        [ dcterms:description "Cell-adhesion protein; altered in several carcinomas"@en ;
+            dcterms:identifier <https://www.uniprot.org/uniprot/P22223> ;
+            rdf:value "Cadherin-3 (CDH3)" ;
             prov:wasDerivedFrom "UniProt" ],
         [ dcterms:description "G-protein-coupled receptor; target of antipsychotic drugs"@en ;
             dcterms:identifier <https://www.uniprot.org/uniprotkb/P14416/entry> ;
@@ -1334,22 +1334,22 @@ ns1:PGO-00000016 a skos:Concept ;
             dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5291> ;
             rdf:value "gelatin" ;
             prov:wasDerivedFrom "ChEBI" ],
-        [ dcterms:description "Substance (also a compound) — illustrates overlap"@en ;
-            dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15377> ;
-            rdf:value "water" ;
-            prov:wasDerivedFrom "ChEBI" ],
+        [ dcterms:description "Mineral substance — not a compound or drug"@en ;
+            dcterms:identifier <https://pubchem.ncbi.nlm.nih.gov/compound/Graphite> ;
+            rdf:value "graphite" ;
+            prov:wasDerivedFrom "PubChem" ],
         [ dcterms:description "Substance that is not a drug or compound"@en ;
             dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:50825> ;
             rdf:value "gold nanoparticle" ;
             prov:wasDerivedFrom "ChEBI" ],
+        [ dcterms:description "Substance (also a compound) — illustrates overlap"@en ;
+            dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15377> ;
+            rdf:value "water" ;
+            prov:wasDerivedFrom "ChEBI" ],
         [ dcterms:description "GSRS entry for caffeine (UNII 3G6A5W338E); demonstrates GSRS substance registration"@en ;
             dcterms:identifier <https://gsrs.ncats.nih.gov/ginas/app/ui/substances/3G6A5W338E> ;
             rdf:value "caffeine" ;
-            prov:wasDerivedFrom "GSRS" ],
-        [ dcterms:description "Mineral substance — not a compound or drug"@en ;
-            dcterms:identifier <https://pubchem.ncbi.nlm.nih.gov/compound/Graphite> ;
-            rdf:value "graphite" ;
-            prov:wasDerivedFrom "PubChem" ] ;
+            prov:wasDerivedFrom "GSRS" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "substance"@en ;
     prov:endedAtTime "2025-06-12"^^xsd:date ;
@@ -1358,6 +1358,18 @@ ns1:PGO-00000016 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
+            dcterms:license <https://www.usa.gov/government-works> ;
+            dcterms:publisher "NCATS, NIH" ;
+            dcterms:rights "https://gsrs.ncats.nih.gov/" ;
+            dcterms:title "Global Substance Registration System (GSRS)" ;
+            dcterms:type "registry" ;
+            void:uriSpace "https://gsrs.ncats.nih.gov/" ;
+            skos:note "GSRS — Global Substance Registration System. Research & Early Development" ;
+            skos:scopeNote "Substance identifiers for regulatory submissions" ;
+            dcat:endpointURL <https://gsrs.ncats.nih.gov/api/v1/> ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "EMBL-EBI" ;
             dcterms:rights "https://www.ebi.ac.uk/chebi/aboutChebiForward.do" ;
@@ -1370,18 +1382,6 @@ ns1:PGO-00000016 a skos:Concept ;
             sh:pattern "CHEBI:[0-9]+" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
-            dcterms:license <https://www.usa.gov/government-works> ;
-            dcterms:publisher "NCATS, NIH" ;
-            dcterms:rights "https://gsrs.ncats.nih.gov/" ;
-            dcterms:title "Global Substance Registration System (GSRS)" ;
-            dcterms:type "registry" ;
-            void:uriSpace "https://gsrs.ncats.nih.gov/" ;
-            skos:note "GSRS — Global Substance Registration System. Research & Early Development" ;
-            skos:scopeNote "Substance identifiers for regulatory submissions" ;
-            dcat:endpointURL <https://gsrs.ncats.nih.gov/api/v1/> ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
             dcterms:license <https://www.usa.gov/government-works> ;
             dcterms:publisher "NCBI, NIH" ;
@@ -1444,6 +1444,17 @@ ns1:PGO-00000017 a skos:Concept ;
             ns1:natureOfLicence "open — attribution required" ],
         [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "QUDT.org" ;
+            dcterms:rights "https://qudt.org/" ;
+            dcterms:title "QUDT Units Vocabulary Documentation" ;
+            dcterms:type "standards document" ;
+            void:uriSpace "https://www.qudt.org/doc/DOC_VOCAB-UNITS.html" ;
+            skos:note "QUDT units reference documentation. Research & Early Development" ;
+            skos:scopeNote "Full unit vocabulary for QUDT Schema v2.1+" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution required" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "OBO Foundry" ;
             dcterms:rights "https://obofoundry.org/ontology/uo.html" ;
             dcterms:title "Units Ontology (UO)" ;
@@ -1453,17 +1464,6 @@ ns1:PGO-00000017 a skos:Concept ;
             skos:scopeNote "Covers SI, metric and derived units for quantitative scientific data" ;
             dcat:endpointURL <https://www.ebi.ac.uk/ols4/ontologies/uo> ;
             sh:pattern "UO_[0-9]{7}" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "QUDT.org" ;
-            dcterms:rights "https://qudt.org/" ;
-            dcterms:title "QUDT Units Vocabulary Documentation" ;
-            dcterms:type "standards document" ;
-            void:uriSpace "https://www.qudt.org/doc/DOC_VOCAB-UNITS.html" ;
-            skos:note "QUDT units reference documentation. Research & Early Development" ;
-            skos:scopeNote "Full unit vocabulary for QUDT Schema v2.1+" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ] .
 
@@ -1488,14 +1488,14 @@ ns1:PGO-00000018 a skos:Concept ;
         "Synonym 'Adverse drug reaction': AE subset"@en,
         "adverse effect: [Specification of] any potential undesirable side effect, adverse reaction or event, complication, or other similar potential consequence associated with the use of a medicinal product. [(URL not provided)]"@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C41331> ;
-    skos:example [ dcterms:description "Common drug-induced adverse event (e.g. following chemotherapy)"@en ;
-            dcterms:identifier <http://sideeffects.embl.de/se/C0027497/> ;
-            rdf:value "Nausea" ;
-            prov:wasDerivedFrom "SIDER 4.1" ],
-        [ dcterms:description "MedDRA Preferred Term (PT 10028813)"@en ;
+    skos:example [ dcterms:description "MedDRA Preferred Term (PT 10028813)"@en ;
             dcterms:identifier <http://purl.bioontology.org/ontology/MEDDRA/10028813> ;
             rdf:value "Nausea (MedDRA PT 10028813)" ;
             prov:wasDerivedFrom "MedDRA" ],
+        [ dcterms:description "Common drug-induced adverse event (e.g. following chemotherapy)"@en ;
+            dcterms:identifier <http://sideeffects.embl.de/se/C0027497/> ;
+            rdf:value "Nausea" ;
+            prov:wasDerivedFrom "SIDER 4.1" ],
         [ dcterms:description "Drug-induced liver injury — serious adverse event category"@en ;
             dcterms:identifier <http://sideeffects.embl.de/se/C0235378/> ;
             rdf:value "Hepatotoxicity" ;
@@ -1508,18 +1508,6 @@ ns1:PGO-00000018 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://www.meddra.org/how-to-use/support-documentation/english> ;
-            dcterms:publisher "ICH / Maintenance and Support Services Organization (MSSO)" ;
-            dcterms:rights "https://www.meddra.org/how-to-use/licence-agreement" ;
-            dcterms:title "Medical Dictionary for Regulatory Activities (MedDRA)" ;
-            dcterms:type "controlled vocabulary" ;
-            void:uriSpace "https://www.meddra.org/" ;
-            skos:note "MedDRA named but no concept-level definition; listed for reference as instance source only. Clinical Development; Regulatory Affairs; Pharmacovigilance" ;
-            skos:scopeNote "Industry-standard terminology for adverse event coding in regulatory submissions" ;
-            sh:pattern "MedDRA LLT/PT codes" ;
-            ns1:identifierResolvability "no" ;
-            ns1:natureOfLicence "commercial — subscription/fees" ],
-        [ a void:Dataset ;
             dcterms:license <http://sideeffects.embl.de/media/download/README> ;
             dcterms:publisher "EMBL Heidelberg (Bork Group)" ;
             dcterms:rights "http://sideeffects.embl.de/" ;
@@ -1530,7 +1518,19 @@ ns1:PGO-00000018 a skos:Concept ;
             skos:scopeNote "Side Effect Resource — maps drugs to adverse effects via SIDER 4.1" ;
             sh:pattern "http://sideeffects.embl.de/se/{UMLS_CUI}" ;
             ns1:identifierResolvability "partial" ;
-            ns1:natureOfLicence "restricted — registration required" ] .
+            ns1:natureOfLicence "restricted — registration required" ],
+        [ a void:Dataset ;
+            dcterms:license <https://www.meddra.org/how-to-use/support-documentation/english> ;
+            dcterms:publisher "ICH / Maintenance and Support Services Organization (MSSO)" ;
+            dcterms:rights "https://www.meddra.org/how-to-use/licence-agreement" ;
+            dcterms:title "Medical Dictionary for Regulatory Activities (MedDRA)" ;
+            dcterms:type "controlled vocabulary" ;
+            void:uriSpace "https://www.meddra.org/" ;
+            skos:note "MedDRA named but no concept-level definition; listed for reference as instance source only. Clinical Development; Regulatory Affairs; Pharmacovigilance" ;
+            skos:scopeNote "Industry-standard terminology for adverse event coding in regulatory submissions" ;
+            sh:pattern "MedDRA LLT/PT codes" ;
+            ns1:identifierResolvability "no" ;
+            ns1:natureOfLicence "commercial — subscription/fees" ] .
 
 ns1:PGO-00000019 a skos:Concept ;
     rdfs:label "excipient"@en ;
@@ -1551,17 +1551,17 @@ ns1:PGO-00000019 a skos:Concept ;
         "excipient: Pharmacological role of a generally pharmacologically inactive substance that is formulated with the active ingredient of a medication. [https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11238-Substances/Excipient]"@en,
         "excipient: [Pharmacological role of] a generally pharmacologically inactive substance that is formulated with the active ingredient of a medication. [(URL not provided)]"@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/CHEBI_75324> ;
-    skos:example [ dcterms:description "Filler/diluent excipient in solid oral dosage forms"@en ;
-            dcterms:identifier <http://purl.obolibrary.org/obo/CHEBI_759844> ;
-            rdf:value "Lactose monohydrate" ;
-            prov:wasDerivedFrom "ChEBI" ],
-        [ dcterms:description "Binder and disintegrant excipient in tablets"@en ;
+    skos:example [ dcterms:description "Binder and disintegrant excipient in tablets"@en ;
             dcterms:identifier <http://purl.obolibrary.org/obo/CHEBI_757032> ;
             rdf:value "Microcrystalline cellulose" ;
             prov:wasDerivedFrom "ChEBI" ],
         [ dcterms:description "Bulking agent excipient in lyophilised formulations"@en ;
             dcterms:identifier <http://purl.obolibrary.org/obo/CHEBI_16899> ;
             rdf:value "Mannitol" ;
+            prov:wasDerivedFrom "ChEBI" ],
+        [ dcterms:description "Filler/diluent excipient in solid oral dosage forms"@en ;
+            dcterms:identifier <http://purl.obolibrary.org/obo/CHEBI_759844> ;
+            rdf:value "Lactose monohydrate" ;
             prov:wasDerivedFrom "ChEBI" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "excipient"@en ;
@@ -1621,6 +1621,18 @@ ns1:PGO-00000020 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
+            dcterms:license <https://www.hl7.org/fhir/license.html> ;
+            dcterms:publisher "Health Level Seven International (HL7)" ;
+            dcterms:rights "https://www.hl7.org/fhir/" ;
+            dcterms:title "HL7 FHIR — Location Resource" ;
+            dcterms:type "standards document" ;
+            void:uriSpace "https://build.fhir.org/location.html" ;
+            skos:note "FHIR Location resource, for broader mapping context. Clinical Development. dcat:endpointURL is deployment-specific (depends on server implementation); a public HAPI FHIR R5 server (https://hapi.fhir.org/baseR5/) can serve as reference" ;
+            skos:scopeNote "FHIR Location for interoperability with clinical systems" ;
+            sh:pattern "FHIR resource URI" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "restricted — registration required" ],
+        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
             dcterms:publisher "National Cancer Institute (NCI), NIH" ;
             dcterms:rights "https://evs.nci.nih.gov" ;
@@ -1632,19 +1644,7 @@ ns1:PGO-00000020 a skos:Concept ;
             dcat:endpointURL <https://api-evsrest.nci.nih.gov/api/v1/> ;
             sh:pattern "NCIT_C[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
-            dcterms:license <https://www.hl7.org/fhir/license.html> ;
-            dcterms:publisher "Health Level Seven International (HL7)" ;
-            dcterms:rights "https://www.hl7.org/fhir/" ;
-            dcterms:title "HL7 FHIR — Location Resource" ;
-            dcterms:type "standards document" ;
-            void:uriSpace "https://build.fhir.org/location.html" ;
-            skos:note "FHIR Location resource, for broader mapping context. Clinical Development. dcat:endpointURL is deployment-specific (depends on server implementation); a public HAPI FHIR R5 server (https://hapi.fhir.org/baseR5/) can serve as reference" ;
-            skos:scopeNote "FHIR Location for interoperability with clinical systems" ;
-            sh:pattern "FHIR resource URI" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "restricted — registration required" ] .
+            ns1:natureOfLicence "open — no conditions" ] .
 
 ns1:PGO-00000021 a skos:Concept ;
     rdfs:label "medical condition"@en ;
@@ -1664,18 +1664,18 @@ ns1:PGO-00000021 a skos:Concept ;
         "Synonym 'Medical condition': capitalised as per schema.org"@en,
         "medical condition: The medical state or condition of a patient [OPMI:0000282]"@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/GSSO_000485> ;
-    skos:example [ dcterms:description "Non-pathological medical condition — key example from GSSO definition"@en ;
+    skos:example [ dcterms:description "Rare hereditary medical condition; ORPHA:391665"@en ;
+            dcterms:identifier <https://www.orpha.net/en/disease/detail/391665> ;
+            rdf:value "Homozygous familial hypercholesterolemia" ;
+            prov:wasDerivedFrom "Orphanet" ],
+        [ dcterms:description "Non-pathological medical condition — key example from GSSO definition"@en ;
             dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25742> ;
             rdf:value "Pregnancy" ;
             prov:wasDerivedFrom "NCIT" ],
         [ dcterms:description "Common pathological medical condition"@en ;
             dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C26747> ;
             rdf:value "Type 2 Diabetes Mellitus" ;
-            prov:wasDerivedFrom "NCIT" ],
-        [ dcterms:description "Rare hereditary medical condition; ORPHA:391665"@en ;
-            dcterms:identifier <https://www.orpha.net/en/disease/detail/391665> ;
-            rdf:value "Homozygous familial hypercholesterolemia" ;
-            prov:wasDerivedFrom "Orphanet" ] ;
+            prov:wasDerivedFrom "NCIT" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "medical condition"@en ;
     prov:endedAtTime "2026-03-03"^^xsd:date ;
@@ -1684,19 +1684,6 @@ ns1:PGO-00000021 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "INSERM / European Reference Network" ;
-            dcterms:rights "https://www.orpha.net/en/" ;
-            dcterms:title "Orphanet" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://www.orpha.net/" ;
-            skos:note "Orphanet — rare disease registry; complements mainstream conditions. Clinical Development; Rare Diseases. Rare Diseases is a therapeutic area, not a PGO pharma domain ([PGO-D-001](../3-PGO-elements-of-modelling/PGO-pharma-domains/PGO-D-001.md)–007)" ;
-            skos:scopeNote "Enumerate rare disease / medical conditions for pharmacogenomics and rare disease data" ;
-            dcat:endpointURL <https://api.orphacode.org/> ;
-            sh:pattern "ORPHA:[0-9]+" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
             dcterms:license <https://www.hl7.org/fhir/license.html> ;
             dcterms:publisher "Health Level Seven International (HL7)" ;
             dcterms:rights "https://www.hl7.org/fhir/" ;
@@ -1720,7 +1707,20 @@ ns1:PGO-00000021 a skos:Concept ;
             dcat:endpointURL <https://api-evsrest.nci.nih.gov/api/v1/> ;
             sh:pattern "NCIT_C[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ] .
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "INSERM / European Reference Network" ;
+            dcterms:rights "https://www.orpha.net/en/" ;
+            dcterms:title "Orphanet" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://www.orpha.net/" ;
+            skos:note "Orphanet — rare disease registry; complements mainstream conditions. Clinical Development; Rare Diseases. Rare Diseases is a therapeutic area, not a PGO pharma domain ([PGO-D-001](../3-PGO-elements-of-modelling/PGO-pharma-domains/PGO-D-001.md)–007)" ;
+            skos:scopeNote "Enumerate rare disease / medical conditions for pharmacogenomics and rare disease data" ;
+            dcat:endpointURL <https://api.orphacode.org/> ;
+            sh:pattern "ORPHA:[0-9]+" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution required" ] .
 
 ns1:PGO-00000022 a skos:Concept ;
     rdfs:label "contraindication"@en ;
@@ -1737,11 +1737,7 @@ ns1:PGO-00000022 a skos:Concept ;
         "Contraindications: A condition or factor associated with a recipient that makes the use of a drug, procedure, or physical agent improper or inadvisable. Contraindications may be absolute (life threatening) or relative (higher risk of complications in which benefits may outweigh risks). [http://id.nlm.nih.gov/mesh/D000075202]"@en,
         "Medical Contraindication: A symptom or medical condition that makes a particular treatment or procedure inadvisable because a person is likely to have a bad reaction. For example, having a bleeding disorder is a contraindication for taking aspirin because treatment with aspirin may cause excess bleeding. [https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50646]"@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/OAE_0000055> ;
-    skos:example [ dcterms:description "General medical contraindication concept; NCIt C50646"@en ;
-            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50646> ;
-            rdf:value "Medical Contraindication" ;
-            prov:wasDerivedFrom "NCIT" ],
-        [ dcterms:description "MedDRA Preferred Term 10010834 (contraindication circumstance)"@en ;
+    skos:example [ dcterms:description "MedDRA Preferred Term 10010834 (contraindication circumstance)"@en ;
             dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/mdr/10010834> ;
             rdf:value "Contraindication to surgery" ;
             prov:wasDerivedFrom "MedDRA" ],
@@ -1752,7 +1748,11 @@ ns1:PGO-00000022 a skos:Concept ;
         [ dcterms:description "MedDRA Preferred Term 10010835 (contraindication circumstance)"@en ;
             dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/mdr/10010835> ;
             rdf:value "Contraindication to vaccination" ;
-            prov:wasDerivedFrom "MedDRA" ] ;
+            prov:wasDerivedFrom "MedDRA" ],
+        [ dcterms:description "General medical contraindication concept; NCIt C50646"@en ;
+            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50646> ;
+            rdf:value "Medical Contraindication" ;
+            prov:wasDerivedFrom "NCIT" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "contraindication"@en ;
     prov:endedAtTime "2026-03-03"^^xsd:date ;
@@ -1805,17 +1805,17 @@ ns1:PGO-00000023 a skos:Concept ;
         "instrument: Description of the instrument or the mass spectrometer. [EBI OLS MS_1000463]"@en,
         "instrument: machines or tools used in laboratory experiments [http://jermontology.org/ontology/JERMOntology#Instrument]"@en ;
     skos:exactMatch <https://w3id.org/mirapie#Instrument> ;
-    skos:example [ dcterms:description "Laboratory instrument measuring physical and chemical characteristics of cells in a fluid stream; NCIt C78806"@en ;
-            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78806> ;
-            rdf:value "Flow cytometer" ;
+    skos:example [ dcterms:description "Laboratory instrument for polymerase chain reaction (thermal cycler); NCIt C78811"@en ;
+            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78811> ;
+            rdf:value "Thermal cycler (PCR instrument)" ;
             prov:wasDerivedFrom "NCIT" ],
         [ dcterms:description "Non-physical data-collection instrument (survey/questionnaire); reflects the SG scope note that instruments include questionnaires; NCIt C17048"@en ;
             dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C17048> ;
             rdf:value "Questionnaire" ;
             prov:wasDerivedFrom "NCIT" ],
-        [ dcterms:description "Laboratory instrument for polymerase chain reaction (thermal cycler); NCIt C78811"@en ;
-            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78811> ;
-            rdf:value "Thermal cycler (PCR instrument)" ;
+        [ dcterms:description "Laboratory instrument measuring physical and chemical characteristics of cells in a fluid stream; NCIt C78806"@en ;
+            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78806> ;
+            rdf:value "Flow cytometer" ;
             prov:wasDerivedFrom "NCIT" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "instrument"@en ;
@@ -1825,19 +1825,6 @@ ns1:PGO-00000023 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "OBI Consortium / EMBL-EBI (OLS4)" ;
-            dcterms:rights "https://creativecommons.org/licenses/by/4.0/" ;
-            dcterms:title "Ontology for Biomedical Investigations (OBI)" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "https://www.ebi.ac.uk/ols4/ontologies/obi" ;
-            skos:note "OBI (Ontology for Biomedical Investigations) — OBI_0000968 covers instrument in scientific investigation context. Research & Early Development" ;
-            skos:scopeNote "Enumerate instruments in R&D and bioassay contexts" ;
-            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/obi> ;
-            sh:pattern "OBI_[0-9]{7}" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
             dcterms:publisher "National Cancer Institute (NCI), NIH" ;
             dcterms:rights "https://evs.nci.nih.gov" ;
@@ -1849,7 +1836,20 @@ ns1:PGO-00000023 a skos:Concept ;
             dcat:endpointURL <https://api-evsrest.nci.nih.gov/api/v1/> ;
             sh:pattern "NCIT_C[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ] .
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "OBI Consortium / EMBL-EBI (OLS4)" ;
+            dcterms:rights "https://creativecommons.org/licenses/by/4.0/" ;
+            dcterms:title "Ontology for Biomedical Investigations (OBI)" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "https://www.ebi.ac.uk/ols4/ontologies/obi" ;
+            skos:note "OBI (Ontology for Biomedical Investigations) — OBI_0000968 covers instrument in scientific investigation context. Research & Early Development" ;
+            skos:scopeNote "Enumerate instruments in R&D and bioassay contexts" ;
+            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/obi> ;
+            sh:pattern "OBI_[0-9]{7}" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution required" ] .
 
 ns1:PGO-00000024 a skos:Concept ;
     rdfs:label "bioassay"@en ;
@@ -1868,18 +1868,18 @@ ns1:PGO-00000024 a skos:Concept ;
         "Measured Bioassay: The direct processing of information in a physical bioAssay by the featureExtraction event. [NCIT:C44471]"@en,
         "bioassay: Bioassay is a shorthand commonly used term for biological assay and is a type of scientific experiment. Bioassays are typically conducted to measure the effects of a substance on a living organism. [MIRO:20000058]"@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C16341> ;
-    skos:example [ dcterms:description "Antibody-dependent cellular cytotoxicity bioassay for monoclonal antibody characterisation"@en ;
-            dcterms:identifier <https://www.ebi.ac.uk/chembl/assay/CHEMBL2180721> ;
-            rdf:value "ADCC reporter bioassay" ;
-            prov:wasDerivedFrom "ChEMBL" ],
-        [ dcterms:description "Bioassay measuring inhibition of HIV replication in a cellular model"@en ;
+    skos:example [ dcterms:description "Bioassay measuring inhibition of HIV replication in a cellular model"@en ;
             dcterms:identifier <https://pubchem.ncbi.nlm.nih.gov/bioassay/1346982> ;
             rdf:value "HIV replication inhibition assay" ;
             prov:wasDerivedFrom "PubChem BioAssay" ],
         [ dcterms:description "Bioassay measuring cell viability; BAO bioassay-branch term (child of bioassay BAO_0000015)"@en ;
             dcterms:identifier <http://www.bioassayontology.org/bao#BAO_0003009> ;
             rdf:value "cell viability assay" ;
-            prov:wasDerivedFrom "BAO" ] ;
+            prov:wasDerivedFrom "BAO" ],
+        [ dcterms:description "Antibody-dependent cellular cytotoxicity bioassay for monoclonal antibody characterisation"@en ;
+            dcterms:identifier <https://www.ebi.ac.uk/chembl/assay/CHEMBL2180721> ;
+            rdf:value "ADCC reporter bioassay" ;
+            prov:wasDerivedFrom "ChEMBL" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "bioassay"@en ;
     prov:endedAtTime "2026-05-13"^^xsd:date ;
@@ -1888,18 +1888,18 @@ ns1:PGO-00000024 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "University of Miami (Schürer Lab)" ;
-            dcterms:rights "http://bioassayontology.org" ;
-            dcterms:title "BioAssay Ontology (BAO)" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "http://www.bioassayontology.org/bao#BAO_" ;
-            skos:note "BioAssay Ontology (BAO). Research & Early Development. IRIs resolve via OLS4 / OntoBee" ;
-            skos:scopeNote "Bioassay terms (the ontology dedicated to bioassays)" ;
-            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/bao> ;
-            sh:pattern "BAO_[0-9]{7}" ;
+            dcterms:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
+            dcterms:publisher "EMBL-EBI" ;
+            dcterms:rights "https://www.ebi.ac.uk/chembl/about" ;
+            dcterms:title "ChEMBL" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://www.ebi.ac.uk/chembl/" ;
+            skos:note "ChEMBL — bioassay database; large collection of annotated biological assay results. Research & Early Development" ;
+            skos:scopeNote "Enumerate specific bioassay types and experimental results across drug discovery" ;
+            dcat:endpointURL <https://www.ebi.ac.uk/chembl/api/data/> ;
+            sh:pattern "CHEMBL[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open, attribution required" ],
+            ns1:natureOfLicence "open — attribution + share-alike" ],
         [ a void:Dataset ;
             dcterms:license <https://www.usa.gov/government-works> ;
             dcterms:publisher "NCBI, NIH" ;
@@ -1927,18 +1927,18 @@ ns1:PGO-00000024 a skos:Concept ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
-            dcterms:publisher "EMBL-EBI" ;
-            dcterms:rights "https://www.ebi.ac.uk/chembl/about" ;
-            dcterms:title "ChEMBL" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://www.ebi.ac.uk/chembl/" ;
-            skos:note "ChEMBL — bioassay database; large collection of annotated biological assay results. Research & Early Development" ;
-            skos:scopeNote "Enumerate specific bioassay types and experimental results across drug discovery" ;
-            dcat:endpointURL <https://www.ebi.ac.uk/chembl/api/data/> ;
-            sh:pattern "CHEMBL[0-9]+" ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "University of Miami (Schürer Lab)" ;
+            dcterms:rights "http://bioassayontology.org" ;
+            dcterms:title "BioAssay Ontology (BAO)" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "http://www.bioassayontology.org/bao#BAO_" ;
+            skos:note "BioAssay Ontology (BAO). Research & Early Development. IRIs resolve via OLS4 / OntoBee" ;
+            skos:scopeNote "Bioassay terms (the ontology dedicated to bioassays)" ;
+            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/bao> ;
+            sh:pattern "BAO_[0-9]{7}" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution + share-alike" ] .
+            ns1:natureOfLicence "open, attribution required" ] .
 
 ns1:PGO-00000025 a skos:Concept ;
     rdfs:label "production equipment"@en ;
@@ -1967,19 +1967,6 @@ ns1:PGO-00000025 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-            dcterms:publisher "Wikimedia Foundation" ;
-            dcterms:rights "https://www.wikidata.org/" ;
-            dcterms:title "Wikidata" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://www.wikidata.org/wiki/" ;
-            skos:note "Wikidata Q-identifiers for production-equipment types; open and persistent. Manufacturing & Technical Operations" ;
-            skos:scopeNote "Enumerate equipment-type instances with open persistent identifiers" ;
-            dcat:endpointURL <https://www.wikidata.org/w/api.php> ;
-            sh:pattern "Q[0-9]+" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
             dcterms:license <https://www.iso.org/terms-and-conditions.html> ;
             dcterms:publisher "ISO" ;
             dcterms:rights "https://www.iso.org" ;
@@ -1991,6 +1978,18 @@ ns1:PGO-00000025 a skos:Concept ;
             sh:pattern "ISO [code]" ;
             ns1:identifierResolvability "partial" ;
             ns1:natureOfLicence "commercial — subscription/fees" ],
+        [ a void:Dataset ;
+            dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+            dcterms:publisher "ETSI / María Poveda-Villalón" ;
+            dcterms:rights "https://mariapoveda.github.io/saref-ext/" ;
+            dcterms:title "SAREF4INMA — SAREF Extension for Industry and Manufacturing" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "https://mariapoveda.github.io/saref-ext/OnToology/SAREF4INMA/ontology/saref4inma.owl/document/ontology.html" ;
+            skos:note "SAREF4INMA — equipment subtype vocabulary for industrial manufacturing. Manufacturing & Technical Operations" ;
+            skos:scopeNote "Ontology-based equipment type classification" ;
+            sh:pattern "s4inma:[term]" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
             dcterms:publisher "National Cancer Institute (NCI), NIH" ;
@@ -2005,15 +2004,16 @@ ns1:PGO-00000025 a skos:Concept ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
-            dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
-            dcterms:publisher "ETSI / María Poveda-Villalón" ;
-            dcterms:rights "https://mariapoveda.github.io/saref-ext/" ;
-            dcterms:title "SAREF4INMA — SAREF Extension for Industry and Manufacturing" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "https://mariapoveda.github.io/saref-ext/OnToology/SAREF4INMA/ontology/saref4inma.owl/document/ontology.html" ;
-            skos:note "SAREF4INMA — equipment subtype vocabulary for industrial manufacturing. Manufacturing & Technical Operations" ;
-            skos:scopeNote "Ontology-based equipment type classification" ;
-            sh:pattern "s4inma:[term]" ;
+            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+            dcterms:publisher "Wikimedia Foundation" ;
+            dcterms:rights "https://www.wikidata.org/" ;
+            dcterms:title "Wikidata" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://www.wikidata.org/wiki/" ;
+            skos:note "Wikidata Q-identifiers for production-equipment types; open and persistent. Manufacturing & Technical Operations" ;
+            skos:scopeNote "Enumerate equipment-type instances with open persistent identifiers" ;
+            dcat:endpointURL <https://www.wikidata.org/w/api.php> ;
+            sh:pattern "Q[0-9]+" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — no conditions" ] .
 
@@ -2037,17 +2037,17 @@ ns1:PGO-00000026 a skos:Concept ;
         "Medical_device (NCI Glossary): An instrument, tool, machine, test kit, or implant that is used to prevent, diagnose, or treat disease or other conditions. [https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16830]"@en,
         "Synonym 'Device': medical context"@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C16830> ;
-    skos:example [ dcterms:description "Implantable medical device (stent); NCIt C50190"@en ;
-            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50190> ;
-            rdf:value "Stent Device" ;
-            prov:wasDerivedFrom "NCIT" ],
-        [ dcterms:description "CGM system cleared by FDA under 510(k) K191450 (2019-06-28); Dexcom Inc., San Diego CA"@en ;
+    skos:example [ dcterms:description "CGM system cleared by FDA under 510(k) K191450 (2019-06-28); Dexcom Inc., San Diego CA"@en ;
             dcterms:identifier <https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K191450> ;
             rdf:value "Dexcom G6 Continuous Glucose Monitoring System" ;
             prov:wasDerivedFrom "FDA 510(k)" ],
         [ dcterms:description "Wearable medical device for continuous blood glucose measurement; NCIt C159776"@en ;
             dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C159776> ;
             rdf:value "Continuous Glucose Monitoring System" ;
+            prov:wasDerivedFrom "NCIT" ],
+        [ dcterms:description "Implantable medical device (stent); NCIt C50190"@en ;
+            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50190> ;
+            rdf:value "Stent Device" ;
             prov:wasDerivedFrom "NCIT" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "medical device"@en ;
@@ -2129,18 +2129,6 @@ ns1:PGO-00000027 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://www.ema.europa.eu/en/about-us/legal-notice> ;
-            dcterms:publisher "European Medicines Agency (EMA)" ;
-            dcterms:rights "https://spor.ema.europa.eu/" ;
-            dcterms:title "EMA SPOR — Substance, Product, Organisation and Referential" ;
-            dcterms:type "registry" ;
-            void:uriSpace "https://spor.ema.europa.eu/" ;
-            skos:note "EMA SPOR — Substance, Product, Organisation and Referential data; EU regulatory standard for indications. Regulatory. REST API is authentication-gated; known base URI pattern https://spor.ema.europa.eu/v1/" ;
-            skos:scopeNote "Enumerate EU-approved indication terms for IDMP-aligned data" ;
-            sh:pattern "SPOR ID" ;
-            ns1:identifierResolvability "partial" ;
-            ns1:natureOfLicence "restricted — registration required" ],
-        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
             dcterms:publisher "National Cancer Institute (NCI), NIH" ;
             dcterms:rights "https://evs.nci.nih.gov" ;
@@ -2165,7 +2153,19 @@ ns1:PGO-00000027 a skos:Concept ;
             dcat:endpointURL <https://www.wikidata.org/w/api.php> ;
             sh:pattern "Q[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ] .
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
+            dcterms:license <https://www.ema.europa.eu/en/about-us/legal-notice> ;
+            dcterms:publisher "European Medicines Agency (EMA)" ;
+            dcterms:rights "https://spor.ema.europa.eu/" ;
+            dcterms:title "EMA SPOR — Substance, Product, Organisation and Referential" ;
+            dcterms:type "registry" ;
+            void:uriSpace "https://spor.ema.europa.eu/" ;
+            skos:note "EMA SPOR — Substance, Product, Organisation and Referential data; EU regulatory standard for indications. Regulatory. REST API is authentication-gated; known base URI pattern https://spor.ema.europa.eu/v1/" ;
+            skos:scopeNote "Enumerate EU-approved indication terms for IDMP-aligned data" ;
+            sh:pattern "SPOR ID" ;
+            ns1:identifierResolvability "partial" ;
+            ns1:natureOfLicence "restricted — registration required" ] .
 
 ns1:PGO-00000028 a skos:Concept ;
     rdfs:label "site"@en ;
@@ -2183,13 +2183,13 @@ ns1:PGO-00000028 a skos:Concept ;
     skos:definition "A site is a spatial region bounded (in part or in whole) by material entities and may be occupied by material entities."@en ;
     skos:exactMatch <http://purl.obolibrary.org/obo/BFO_0000050>,
         <https://www.wikidata.org/entity/Q17334923> ;
-    skos:example [ dcterms:description "Anatomical site (spatial region bounded by organ tissue); NCIt C12736"@en ;
-            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C12736> ;
-            rdf:value "Intestine (anatomical site)" ;
-            prov:wasDerivedFrom "NCIT" ],
-        [ dcterms:description "Molecular binding site (spatial region on a protein where a drug binds); NCIt C13405"@en ;
+    skos:example [ dcterms:description "Molecular binding site (spatial region on a protein where a drug binds); NCIt C13405"@en ;
             dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13405> ;
             rdf:value "Drug binding site" ;
+            prov:wasDerivedFrom "NCIT" ],
+        [ dcterms:description "Anatomical site (spatial region bounded by organ tissue); NCIt C12736"@en ;
+            dcterms:identifier <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C12736> ;
+            rdf:value "Intestine (anatomical site)" ;
             prov:wasDerivedFrom "NCIT" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "site"@en ;
@@ -2199,18 +2199,6 @@ ns1:PGO-00000028 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "Dumontier Lab / Maastricht University" ;
-            dcterms:rights "https://creativecommons.org/licenses/by/4.0/" ;
-            dcterms:title "Semanticscience Integrated Ontology (SIO)" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "http://semanticscience.org/resource/" ;
-            skos:note "SIO as definition source; SIO_000019 is the anchor concept. Research & Early Development; Clinical Development. Available as OWL/RDF; no dedicated REST API; may be accessible via OLS4" ;
-            skos:scopeNote "SIO provides a hierarchy of spatial and material entity concepts" ;
-            sh:pattern "SIO_[0-9]{6}" ;
-            ns1:identifierResolvability "partial" ;
-            ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
             dcterms:publisher "National Cancer Institute (NCI), NIH" ;
             dcterms:rights "https://evs.nci.nih.gov" ;
@@ -2222,7 +2210,19 @@ ns1:PGO-00000028 a skos:Concept ;
             dcat:endpointURL <https://api-evsrest.nci.nih.gov/api/v1/> ;
             sh:pattern "NCIT_C[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ] .
+            ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "Dumontier Lab / Maastricht University" ;
+            dcterms:rights "https://creativecommons.org/licenses/by/4.0/" ;
+            dcterms:title "Semanticscience Integrated Ontology (SIO)" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "http://semanticscience.org/resource/" ;
+            skos:note "SIO as definition source; SIO_000019 is the anchor concept. Research & Early Development; Clinical Development. Available as OWL/RDF; no dedicated REST API; may be accessible via OLS4" ;
+            skos:scopeNote "SIO provides a hierarchy of spatial and material entity concepts" ;
+            sh:pattern "SIO_[0-9]{6}" ;
+            ns1:identifierResolvability "partial" ;
+            ns1:natureOfLicence "open — attribution required" ] .
 
 ns1:PGO-00000029 a skos:Concept ;
     rdfs:label "molecular target"@en ;
@@ -2246,11 +2246,7 @@ ns1:PGO-00000029 a skos:Concept ;
         "protein target: A peptide, protein, or protein complex that is recognized by an antibody. [https://bioportal.bioontology.org/ontologies/ERO?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FERO_0001545]"@en,
         "target: The role of a molecular entity (protein or nucleic acid) that is the presumed subject of an assay and whose activity is being regulated by an entity with a perturbagen role in that assay. [https://bioportal.bioontology.org/ontologies/BAO?p=classes&conceptid=http%3A%2F%2Fwww.bioassayontology.org%2Fbao%23BAO_0003064]"@en ;
     skos:exactMatch <http://www.drugtargetontology.org/dto/DTO_00000004> ;
-    skos:example [ dcterms:description "MicroRNA target of miravirsen (anti-miR-122 LNA antisense oligonucleotide for HCV treatment); first ncRNA drug target to reach Phase II clinical trials; illustrates the RNA/ncRNA molecular target class"@en ;
-            dcterms:identifier <https://rnacentral.org/rna/URS00003380CC/9606> ;
-            rdf:value "miR-122-5p (human)" ;
-            prov:wasDerivedFrom "RNAcentral" ],
-        [ dcterms:description "Protein kinase — target of erlotinib and gefitinib in NSCLC"@en ;
+    skos:example [ dcterms:description "Protein kinase — target of erlotinib and gefitinib in NSCLC"@en ;
             dcterms:identifier <https://www.ebi.ac.uk/chembl/explore/target/CHEMBL203> ;
             rdf:value "EGFR (Epidermal Growth Factor Receptor)" ;
             prov:wasDerivedFrom "ChEMBL" ],
@@ -2261,7 +2257,11 @@ ns1:PGO-00000029 a skos:Concept ;
         [ dcterms:description "Receptor tyrosine kinase — target of trastuzumab in HER2+ breast cancer"@en ;
             dcterms:identifier <https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1824> ;
             rdf:value "HER2 (ERBB2)" ;
-            prov:wasDerivedFrom "ChEMBL" ] ;
+            prov:wasDerivedFrom "ChEMBL" ],
+        [ dcterms:description "MicroRNA target of miravirsen (anti-miR-122 LNA antisense oligonucleotide for HCV treatment); first ncRNA drug target to reach Phase II clinical trials; illustrates the RNA/ncRNA molecular target class"@en ;
+            dcterms:identifier <https://rnacentral.org/rna/URS00003380CC/9606> ;
+            rdf:value "miR-122-5p (human)" ;
+            prov:wasDerivedFrom "RNAcentral" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "molecular target"@en ;
     prov:endedAtTime "2025-09-24"^^xsd:date ;
@@ -2270,19 +2270,6 @@ ns1:PGO-00000029 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
-            dcterms:publisher "EMBL-EBI" ;
-            dcterms:rights "https://www.ebi.ac.uk/chembl/about" ;
-            dcterms:title "ChEMBL — Target Explorer" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://www.ebi.ac.uk/chembl/explore/target/" ;
-            skos:note "ChEMBL — large, curated database of bioactive molecules and their biological targets. Research & Early Development" ;
-            skos:scopeNote "Enumerate molecular target instances across drug discovery" ;
-            dcat:endpointURL <https://www.ebi.ac.uk/chembl/api/data/target/> ;
-            sh:pattern "CHEMBL[0-9]+" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution + share-alike" ],
-        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
             dcterms:publisher "Open Targets (EMBL-EBI, Wellcome Sanger Institute, et al.)" ;
             dcterms:rights "https://platform.opentargets.org/" ;
@@ -2295,6 +2282,19 @@ ns1:PGO-00000029 a skos:Concept ;
             sh:pattern "ENSG[0-9]{11}" ;
             ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — no conditions" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
+            dcterms:publisher "EMBL-EBI" ;
+            dcterms:rights "https://www.ebi.ac.uk/chembl/about" ;
+            dcterms:title "ChEMBL — Target Explorer" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://www.ebi.ac.uk/chembl/explore/target/" ;
+            skos:note "ChEMBL — large, curated database of bioactive molecules and their biological targets. Research & Early Development" ;
+            skos:scopeNote "Enumerate molecular target instances across drug discovery" ;
+            dcat:endpointURL <https://www.ebi.ac.uk/chembl/api/data/target/> ;
+            sh:pattern "CHEMBL[0-9]+" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution + share-alike" ],
         [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
             dcterms:publisher "EMBL-EBI" ;
@@ -2333,11 +2333,7 @@ ns1:PGO-00000030 a skos:Concept ;
         "subject: The universal for which we are capturing data for or about. It defines the entity for which we want to relate captured content to (e.g. a car, a person, an animal). Note: a subject is not disjoint with material entity or immaterial entity. [http://purl.org/dco/v1#subject]"@en ;
     skos:exactMatch <https://biolink.github.io/biolink-model/Human>,
         <https://www.wikidata.org/entity/Q4204239> ;
-    skos:example [ dcterms:description "Human patient study subject in the MSK IMPACT targeted sequencing study"@en ;
-            dcterms:identifier <https://www.cbioportal.org/patient?studyId=msk_impact_2017&caseId=P-0003456> ;
-            rdf:value "Patient P-0003456 (MSK IMPACT 2017)" ;
-            prov:wasDerivedFrom "cBioPortal" ],
-        [ dcterms:description "Human patient study subject in The Cancer Genome Atlas glioblastoma cohort"@en ;
+    skos:example [ dcterms:description "Human patient study subject in The Cancer Genome Atlas glioblastoma cohort"@en ;
             dcterms:identifier <https://www.cbioportal.org/patient?studyId=gbm_tcga_pub&caseId=TCGA-02-0001> ;
             rdf:value "Patient TCGA-02-0001 (TCGA GBM)" ;
             prov:wasDerivedFrom "cBioPortal" ],
@@ -2352,7 +2348,11 @@ ns1:PGO-00000030 a skos:Concept ;
         [ dcterms:description "Non-human study-subject instance: a chalk-hill blue butterfly (Lysandra coridon) specimen, specimen_id SAN20004396, where the subject is the sample itself"@en ;
             dcterms:identifier <https://www.ebi.ac.uk/biosamples/samples/SAMEA119944481> ;
             rdf:value "Lysandra coridon specimen SAN20004396" ;
-            prov:wasDerivedFrom "EBI BioSamples" ] ;
+            prov:wasDerivedFrom "EBI BioSamples" ],
+        [ dcterms:description "Human patient study subject in the MSK IMPACT targeted sequencing study"@en ;
+            dcterms:identifier <https://www.cbioportal.org/patient?studyId=msk_impact_2017&caseId=P-0003456> ;
+            rdf:value "Patient P-0003456 (MSK IMPACT 2017)" ;
+            prov:wasDerivedFrom "cBioPortal" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "study subject"@en ;
     prov:endedAtTime "2025-09-24"^^xsd:date ;
@@ -2361,19 +2361,6 @@ ns1:PGO-00000030 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
-            dcterms:publisher "NCBI (US National Library of Medicine)" ;
-            dcterms:rights "https://www.ncbi.nlm.nih.gov/home/about/policies/" ;
-            dcterms:title "NCBI BioSample / BioProject" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://www.ncbi.nlm.nih.gov/biosample/" ;
-            skos:note "NCBI BioSample / BioProject. Research & Early Development. A sample record can serve as a study-subject instance where it carries a donor ID identifying the subject. NCBI GEO Sample (GSM) records with donor IDs also qualify (e.g. GSM9866234, part of BioProject 1492360)" ;
-            skos:scopeNote "Non-patient and sample-linked study-subject instances" ;
-            dcat:endpointURL <https://www.ncbi.nlm.nih.gov/biosample/> ;
-            sh:pattern "SAMN[0-9]+" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "Memorial Sloan Kettering Cancer Center / cBioPortal Consortium" ;
             dcterms:rights "https://www.cbioportal.org/terms" ;
@@ -2386,6 +2373,19 @@ ns1:PGO-00000030 a skos:Concept ;
             sh:pattern "Study-specific compound IDs" ;
             ns1:identifierResolvability "partial" ;
             ns1:natureOfLicence "open — attribution required" ],
+        [ a void:Dataset ;
+            dcterms:license <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+            dcterms:publisher "NCBI (US National Library of Medicine)" ;
+            dcterms:rights "https://www.ncbi.nlm.nih.gov/home/about/policies/" ;
+            dcterms:title "NCBI BioSample / BioProject" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://www.ncbi.nlm.nih.gov/biosample/" ;
+            skos:note "NCBI BioSample / BioProject. Research & Early Development. A sample record can serve as a study-subject instance where it carries a donor ID identifying the subject. NCBI GEO Sample (GSM) records with donor IDs also qualify (e.g. GSM9866234, part of BioProject 1492360)" ;
+            skos:scopeNote "Non-patient and sample-linked study-subject instances" ;
+            dcat:endpointURL <https://www.ncbi.nlm.nih.gov/biosample/> ;
+            sh:pattern "SAMN[0-9]+" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
             dcterms:license <https://www.ebi.ac.uk/about/terms-of-use> ;
             dcterms:publisher "EMBL-EBI" ;
@@ -2402,7 +2402,7 @@ ns1:PGO-00000030 a skos:Concept ;
 
 ns1:PGO-00000031 a skos:Concept ;
     rdfs:label "cell line"@en ;
-    dcterms:description "**Round 1** (2026-04-23) Expert alignment session for Cell_Line. Candidate definitions were reviewed against the PGO pharma use cases. 2026-04-23 (alignment completed) **Outcome:** Recommendation formulated. See §4."@en ;
+    dcterms:description "**Round 1** (2026-04-23) The session reviewed four candidate definitions for Cell_Line, from the Cell Line Ontology (CLO), the Semanticscience Integrated Ontology (SIO), the National Cancer Institute Thesaurus (NCIT) and Medical Subject Headings (MeSH). The experts rejected the SIO definition because \"genetically identical\" is too strict: cell lines drift genetically across passages. They rejected the NCIT definition because not all cell lines proliferate indefinitely (primary cell lines, for example, stop after a limited number of divisions). They found that the MeSH definition lacks any genetic component. The group agreed that the CLO definition is the closest available option. Experts flagged one limitation: the phrase \"shares a common propagation history\" may not fit commercially distributed cell lines bought from several vendors. One expert noted that propagation history can branch like a tree while still having a common ancestor. The same expert proposed an adapted text anchored in Basic Formal Ontology (BFO) terms, which the group recorded as a candidate improvement to submit to CLO rather than as a PGO definition. **Outcome:** Consensus reached on the CLO definition (CLO_0000031). Label `Cell_Line` confirmed. The Pistoia Alliance will propose an improvement to the CLO maintainers to cover commercially distributed cell lines."@en ;
     dcterms:identifier "PGO-00000031" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:rights "Cell Line Ontology (CLO). Definition of Cell Line. http://purl.obolibrary.org/obo/CLO_0000031"@en ;
@@ -2437,19 +2437,6 @@ ns1:PGO-00000031 a skos:Concept ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "Swiss Institute of Bioinformatics (SIB)" ;
-            dcterms:rights "https://www.cellosaurus.org/" ;
-            dcterms:title "Cellosaurus" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://www.cellosaurus.org/" ;
-            skos:note "Cellosaurus — authoritative knowledge resource on cell lines; maintained by SIB Swiss Institute of Bioinformatics. Research & Early Development" ;
-            skos:scopeNote "Enumerate specific cell line instances with stable identifiers" ;
-            dcat:endpointURL <https://api.cellosaurus.org/> ;
-            sh:pattern "CVCL_[0-9A-Z]+" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "University of Michigan (He Group) / OBO Foundry" ;
             dcterms:rights "https://github.com/CLO-Ontology/CLO" ;
             dcterms:title "Cell Line Ontology (CLO)" ;
@@ -2460,11 +2447,24 @@ ns1:PGO-00000031 a skos:Concept ;
             dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/clo> ;
             sh:pattern "CLO_[0-9]{7}" ;
             ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution required" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "Swiss Institute of Bioinformatics (SIB)" ;
+            dcterms:rights "https://www.cellosaurus.org/" ;
+            dcterms:title "Cellosaurus" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://www.cellosaurus.org/" ;
+            skos:note "Cellosaurus — authoritative knowledge resource on cell lines; maintained by SIB Swiss Institute of Bioinformatics. Research & Early Development" ;
+            skos:scopeNote "Enumerate specific cell line instances with stable identifiers" ;
+            dcat:endpointURL <https://api.cellosaurus.org/> ;
+            sh:pattern "CVCL_[0-9A-Z]+" ;
+            ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ] .
 
 ns1:PGO-00000032 a skos:Concept ;
     rdfs:label "cell type"@en ;
-    dcterms:description "**Round 1** (2026-04-23) Expert alignment session for Cell_Type. Candidate definitions were reviewed against the PGO pharma use cases. 2026-04-23 (alignment completed) **Outcome:** Recommendation formulated. See §4."@en ;
+    dcterms:description "**Round 1** (2026-04-23) The session compared two candidate definitions for Cell_Type, from the Cell Ontology (CL) and the Experimental Factor Ontology (EFO). The experts rejected the CL definition by consensus as hard to understand and too arbitrary in how it groups cells. The discussion raised a modeling point: a cell type is a descriptor of a cell (a class), not a material entity, which matters for placement in ontologies aligned with Basic Formal Ontology (BFO). All experts accepted the EFO definition, \"a distinct morphological or functional form of cell\" (examples: epithelial cell, glial cell). The group chose not to add detail, because a more specific wording could exclude valid instances. The question of when to name a concept with the suffix \"type\" (cell type, tissue type) was noted as an open modeling topic for later phases. **Outcome:** Consensus reached on the EFO definition (EFO_0000324). Label `Cell_Type` confirmed."@en ;
     dcterms:identifier "PGO-00000032" ;
     dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
     dcterms:rights "Experimental Factor Ontology (EFO). Definition of Cell Type. http://www.ebi.ac.uk/efo/EFO_0000324"@en ;
@@ -2479,13 +2479,13 @@ ns1:PGO-00000032 a skos:Concept ;
             dcterms:identifier <http://purl.obolibrary.org/obo/CL_0000084> ;
             rdf:value "T cell" ;
             prov:wasDerivedFrom "CL" ],
-        [ dcterms:description "Liver cell type used in toxicology and DMPK assays"@en ;
-            dcterms:identifier <http://purl.obolibrary.org/obo/CL_0000182> ;
-            rdf:value "hepatocyte" ;
-            prov:wasDerivedFrom "CL" ],
         [ dcterms:description "Lymphocyte type producing antibodies; used in immunology and oncology research"@en ;
             dcterms:identifier <http://purl.obolibrary.org/obo/CL_0000236> ;
             rdf:value "B cell" ;
+            prov:wasDerivedFrom "CL" ],
+        [ dcterms:description "Liver cell type used in toxicology and DMPK assays"@en ;
+            dcterms:identifier <http://purl.obolibrary.org/obo/CL_0000182> ;
+            rdf:value "hepatocyte" ;
             prov:wasDerivedFrom "CL" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "cell type"@en ;
@@ -2495,19 +2495,6 @@ ns1:PGO-00000032 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "OBO Foundry" ;
-            dcterms:rights "https://obofoundry.org/ontology/cl.html" ;
-            dcterms:title "Cell Ontology (CL)" ;
-            dcterms:type "ontology" ;
-            void:uriSpace "http://purl.obolibrary.org/obo/CL_" ;
-            skos:note "CL — Cell Ontology; OBO Foundry standard for cell type classification. Research & Early Development" ;
-            skos:scopeNote "Alternative source; widely used in single-cell transcriptomics datasets" ;
-            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/cl> ;
-            sh:pattern "CL:[0-9]+" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
             dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
             dcterms:publisher "EMBL-EBI" ;
             dcterms:rights "https://www.ebi.ac.uk/efo/" ;
@@ -2519,11 +2506,24 @@ ns1:PGO-00000032 a skos:Concept ;
             dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/efo> ;
             sh:pattern "EFO:[0-9]+" ;
             ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution required" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "OBO Foundry" ;
+            dcterms:rights "https://obofoundry.org/ontology/cl.html" ;
+            dcterms:title "Cell Ontology (CL)" ;
+            dcterms:type "ontology" ;
+            void:uriSpace "http://purl.obolibrary.org/obo/CL_" ;
+            skos:note "CL — Cell Ontology; OBO Foundry standard for cell type classification. Research & Early Development" ;
+            skos:scopeNote "Alternative source; widely used in single-cell transcriptomics datasets" ;
+            dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/cl> ;
+            sh:pattern "CL:[0-9]+" ;
+            ns1:identifierResolvability "yes" ;
             ns1:natureOfLicence "open — attribution required" ] .
 
 ns1:PGO-00000033 a skos:Concept ;
     rdfs:label "clinical study subject"@en ;
-    dcterms:description "**Round 1** (2026-04-23) Expert alignment session for Clinical_Study_Subject. Candidate definitions were reviewed against the PGO pharma use cases. 2026-03-12 (introductory); 2026-04-23 (alignment completed) **Outcome:** Recommendation formulated. See §4."@en ;
+    dcterms:description "**Round 1** (2026-04-23) Clinical_Study_Subject builds on earlier alignment work on study subjects. An earlier proposal to adopt the NCIT definition of Study Subject (C41189) did not cover preclinical animal subjects well enough, so the clinical case is now a concept of its own. The session compared two definitions linked to NCIT C70668: the full NCIT definition and the shorter Clinical Data Interchange Standards Consortium (CDISC) definition, \"a person who is enrolled in a clinical study or trial\". Experts raised two problems with the longer text: it is more complex than needed, and its qualifier \"living\" fails for subjects who die during a study, whose samples and data may still be analyzed. The group also discussed alternative wordings and set them aside: \"volunteer\" would exclude children enrolled through proxy consent. The group converged on the shorter CDISC definition as the one with the fewest semantic problems. One expert recorded a minority view that \"human being\" (a biological notion) would be more precise than \"person\" (a legal notion), and accepted that PGO reuses the source definition without changing it. **Outcome:** Consensus reached on the CDISC short definition (via NCIT C70668). Label `Clinical_Study_Subject` confirmed. Minority view on \"person\" versus \"human being\" recorded."@en ;
     dcterms:identifier "PGO-00000033" ;
     dcterms:rights "CDISC. Clinical Study Subject definition. NCI Thesaurus C70668 (short formulation). https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70668"@en,
         "Licence of the definition source: Public domain / CC0 (NCIT). CDISC terminology: see https://www.cdisc.org/standards/terminology"@en ;
@@ -2594,13 +2594,13 @@ ns1:PGO-00000035 a skos:Concept ;
             dcterms:identifier <http://www.bioassayontology.org/bao#BAO_0040011> ;
             rdf:value "molecular abundance method" ;
             prov:wasDerivedFrom "BAO" ],
-        [ dcterms:description "Method to quantify the interaction (binding) between two molecules, e.g. ligand-target or protein-protein"@en ;
-            dcterms:identifier <http://www.bioassayontology.org/bao#BAO_0000123> ;
-            rdf:value "binding assessment method" ;
-            prov:wasDerivedFrom "BAO" ],
         [ dcterms:description "Method to measure enzyme catalytic activity, directly or coupled to a secondary signal"@en ;
             dcterms:identifier <http://www.bioassayontology.org/bao#BAO_0000124> ;
             rdf:value "enzyme activity measurement method" ;
+            prov:wasDerivedFrom "BAO" ],
+        [ dcterms:description "Method to quantify the interaction (binding) between two molecules, e.g. ligand-target or protein-protein"@en ;
+            dcterms:identifier <http://www.bioassayontology.org/bao#BAO_0000123> ;
+            rdf:value "binding assessment method" ;
             prov:wasDerivedFrom "BAO" ],
         [ dcterms:description "Method that modulates the expression of a gene"@en ;
             dcterms:identifier <http://www.bioassayontology.org/bao#BAO_0002431> ;
@@ -2615,18 +2615,6 @@ ns1:PGO-00000035 a skos:Concept ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     prov:wasDerivedFrom <http://www.bioassayontology.org/bao#BAO_0003028> ;
     ns1:preferredSource [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "Protocols.io Inc." ;
-            dcterms:rights "https://www.protocols.io/terms" ;
-            dcterms:title "protocols.io" ;
-            dcterms:type "registry" ;
-            void:uriSpace "https://www.protocols.io/" ;
-            skos:note "protocols.io — open-access repository of detailed scientific methods. Research & Early Development. REST API requires an API key (base endpoint: https://www.protocols.io/api/v4/)" ;
-            skos:scopeNote "Enumerate specific protocol instances of assay methods; links to structured, citeable protocols" ;
-            sh:pattern "doi:[0-9a-z/]+" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ],
-        [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "OBI Consortium / OBO Foundry" ;
             dcterms:rights "https://obi-ontology.org" ;
@@ -2651,7 +2639,19 @@ ns1:PGO-00000035 a skos:Concept ;
             dcat:endpointURL <https://www.ebi.ac.uk/ols4/api/ontologies/bao> ;
             sh:pattern "BAO_[0-9]{7}" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open, attribution required" ] .
+            ns1:natureOfLicence "open, attribution required" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "Protocols.io Inc." ;
+            dcterms:rights "https://www.protocols.io/terms" ;
+            dcterms:title "protocols.io" ;
+            dcterms:type "registry" ;
+            void:uriSpace "https://www.protocols.io/" ;
+            skos:note "protocols.io — open-access repository of detailed scientific methods. Research & Early Development. REST API requires an API key (base endpoint: https://www.protocols.io/api/v4/)" ;
+            skos:scopeNote "Enumerate specific protocol instances of assay methods; links to structured, citeable protocols" ;
+            sh:pattern "doi:[0-9a-z/]+" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution required" ] .
 
 ns1:PGO-00000036 a skos:Concept ;
     rdfs:label "active pharmaceutical ingredient"@en ;
@@ -2673,14 +2673,10 @@ ns1:PGO-00000036 a skos:Concept ;
             dcterms:identifier <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:45783> ;
             rdf:value "Imatinib (ChEBI)" ;
             prov:wasDerivedFrom "ChEBI" ],
-        [ dcterms:description "Biologic API; recombinant insulin is the active pharmaceutical ingredient in insulin formulations"@en ;
-            dcterms:identifier <https://www.uniprot.org/uniprotkb/P01308/entry> ;
-            rdf:value "Human insulin (precursor protein)" ;
-            prov:wasDerivedFrom "UniProt" ],
-        [ dcterms:description "Same API as CHEMBL941; identified via UNII/GSRS registry (UNII BKJ8M8G5HI)"@en ;
-            dcterms:identifier <https://gsrs.ncats.nih.gov/ginas/app/beta/substances/BKJ8M8G5HI> ;
-            rdf:value "Imatinib (GSRS)" ;
-            prov:wasDerivedFrom "GSRS" ],
+        [ dcterms:description "Small-molecule API; BCR-ABL1 kinase inhibitor (Gleevec)"@en ;
+            dcterms:identifier <https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL941> ;
+            rdf:value "Imatinib" ;
+            prov:wasDerivedFrom "ChEMBL" ],
         [ dcterms:description "GLP-1 receptor agonist API (Ozempic/Wegovy); CHEMBL2108724"@en ;
             dcterms:identifier <https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2108724> ;
             rdf:value "Semaglutide" ;
@@ -2689,10 +2685,14 @@ ns1:PGO-00000036 a skos:Concept ;
             dcterms:identifier <https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1201585> ;
             rdf:value "Trastuzumab" ;
             prov:wasDerivedFrom "ChEMBL" ],
-        [ dcterms:description "Small-molecule API; BCR-ABL1 kinase inhibitor (Gleevec)"@en ;
-            dcterms:identifier <https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL941> ;
-            rdf:value "Imatinib" ;
-            prov:wasDerivedFrom "ChEMBL" ] ;
+        [ dcterms:description "Same API as CHEMBL941; identified via UNII/GSRS registry (UNII BKJ8M8G5HI)"@en ;
+            dcterms:identifier <https://gsrs.ncats.nih.gov/ginas/app/beta/substances/BKJ8M8G5HI> ;
+            rdf:value "Imatinib (GSRS)" ;
+            prov:wasDerivedFrom "GSRS" ],
+        [ dcterms:description "Biologic API; recombinant insulin is the active pharmaceutical ingredient in insulin formulations"@en ;
+            dcterms:identifier <https://www.uniprot.org/uniprotkb/P01308/entry> ;
+            rdf:value "Human insulin (precursor protein)" ;
+            prov:wasDerivedFrom "UniProt" ] ;
     skos:inScheme ns1:PGOConceptScheme ;
     skos:prefLabel "active pharmaceutical ingredient"@en ;
     prov:endedAtTime "2026-10-30"^^xsd:date ;
@@ -2701,6 +2701,19 @@ ns1:PGO-00000036 a skos:Concept ;
         "2-PGO-templates/PGO-T-internal-record-template-v1.7.md" ;
     prov:wasAttributedTo "pgo_r_to_public_md.v1.10.0.py" ;
     ns1:preferredSource [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
+            dcterms:publisher "EMBL-EBI" ;
+            dcterms:rights "https://chembl.gitbook.io/chembl-interface-documentation/about#data-licensing" ;
+            dcterms:title "ChEMBL" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://www.ebi.ac.uk/chembl/" ;
+            skos:note "ChEMBL — curated bioactive molecule database; covers approved small-molecule APIs and development candidates. Research & Early Development" ;
+            skos:scopeNote "Small-molecule APIs in discovery and preclinical development stages" ;
+            dcat:endpointURL <https://www.ebi.ac.uk/chembl/api/data/> ;
+            sh:pattern "CHEMBL[0-9]+" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — attribution + share-alike" ],
+        [ a void:Dataset ;
             dcterms:license <https://www.usa.gov/government-works> ;
             dcterms:publisher "NCATS, NIH" ;
             dcterms:rights "https://gsrs.ncats.nih.gov/" ;
@@ -2715,32 +2728,6 @@ ns1:PGO-00000036 a skos:Concept ;
             ns1:natureOfLicence "open — no conditions" ],
         [ a void:Dataset ;
             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-            dcterms:publisher "UniProt Consortium (EMBL-EBI / SIB / PIR)" ;
-            dcterms:rights "https://www.uniprot.org/help/license" ;
-            dcterms:title "UniProt" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://www.uniprot.org/" ;
-            skos:note "UniProt — protein sequence and functional annotation; primary source for protein-based APIs. Research & Early Development / Biologics. Biologics is a sub-modality within R&D, not a separate PGO pharma domain ([PGO-D-001](../3-PGO-elements-of-modelling/PGO-pharma-domains/PGO-D-001.md)–007)" ;
-            skos:scopeNote "Biologic APIs: monoclonal antibodies, recombinant proteins, peptides, enzymes — reflects the broad modality scope adopted in the expert sessions" ;
-            dcat:endpointURL <https://rest.uniprot.org/> ;
-            sh:pattern "[A-N,R-Z][0-9][A-Z][A-Z,0-9][A-Z,0-9][0-9]" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — no conditions" ],
-        [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
-            dcterms:publisher "EMBL-EBI" ;
-            dcterms:rights "https://chembl.gitbook.io/chembl-interface-documentation/about#data-licensing" ;
-            dcterms:title "ChEMBL" ;
-            dcterms:type "database" ;
-            void:uriSpace "https://www.ebi.ac.uk/chembl/" ;
-            skos:note "ChEMBL — curated bioactive molecule database; covers approved small-molecule APIs and development candidates. Research & Early Development" ;
-            skos:scopeNote "Small-molecule APIs in discovery and preclinical development stages" ;
-            dcat:endpointURL <https://www.ebi.ac.uk/chembl/api/data/> ;
-            sh:pattern "CHEMBL[0-9]+" ;
-            ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution + share-alike" ],
-        [ a void:Dataset ;
-            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
             dcterms:publisher "EMBL-EBI" ;
             dcterms:rights "https://www.ebi.ac.uk/chebi/aboutChebiForward.do" ;
             dcterms:title "Chemical Entities of Biological Interest (ChEBI)" ;
@@ -2751,7 +2738,20 @@ ns1:PGO-00000036 a skos:Concept ;
             dcat:endpointURL <https://www.ebi.ac.uk/webservices/chebi/2.0/> ;
             sh:pattern "CHEBI:[0-9]+" ;
             ns1:identifierResolvability "yes" ;
-            ns1:natureOfLicence "open — attribution required" ] .
+            ns1:natureOfLicence "open — attribution required" ],
+        [ a void:Dataset ;
+            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+            dcterms:publisher "UniProt Consortium (EMBL-EBI / SIB / PIR)" ;
+            dcterms:rights "https://www.uniprot.org/help/license" ;
+            dcterms:title "UniProt" ;
+            dcterms:type "database" ;
+            void:uriSpace "https://www.uniprot.org/" ;
+            skos:note "UniProt — protein sequence and functional annotation; primary source for protein-based APIs. Research & Early Development / Biologics. Biologics is a sub-modality within R&D, not a separate PGO pharma domain ([PGO-D-001](../3-PGO-elements-of-modelling/PGO-pharma-domains/PGO-D-001.md)–007)" ;
+            skos:scopeNote "Biologic APIs: monoclonal antibodies, recombinant proteins, peptides, enzymes — reflects the broad modality scope adopted in the expert sessions" ;
+            dcat:endpointURL <https://rest.uniprot.org/> ;
+            sh:pattern "[A-N,R-Z][0-9][A-Z][A-Z,0-9][A-Z,0-9][0-9]" ;
+            ns1:identifierResolvability "yes" ;
+            ns1:natureOfLicence "open — no conditions" ] .
 
 <https://www.pistoiaalliance.org/> a foaf:Organization ;
     foaf:name "Pistoia Alliance" .
